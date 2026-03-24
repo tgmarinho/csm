@@ -1,0 +1,246 @@
+/* Página Sobre — layout inspirado em landing de terapia (hero interno, stats, depoimentos) */
+
+.page-hero-inner {
+	position: relative;
+	min-height: 52vh;
+	color: #fff;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-image: url("../img/capa.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 120px 24px 80px;
+}
+
+.page-hero-inner::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(173, 103, 234, 0.72);
+	z-index: 0;
+}
+
+.page-hero-inner .page-hero-content {
+	position: relative;
+	z-index: 1;
+	max-width: 720px;
+}
+
+.page-hero-inner .page-hero-kicker {
+	font-size: 0.95rem;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	opacity: 0.95;
+	margin-bottom: 12px;
+}
+
+.page-hero-inner .page-hero-content h1 {
+	color: #fff;
+	font-size: 2.25rem;
+	margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+	.page-hero-inner .page-hero-content h1 {
+		font-size: 2.75rem;
+	}
+}
+
+.page-hero-inner .page-hero-lead {
+	font-size: 1rem;
+	line-height: 1.7;
+	opacity: 0.95;
+	margin-bottom: 28px;
+}
+
+.page-hero-inner .page-hero-actions .btn {
+	margin: 6px 8px;
+}
+
+.about-page-section {
+	padding: 90px 0;
+}
+
+.about-page-section.bg-soft {
+	background: #f8f7fb;
+}
+
+.about-intro-head {
+	text-align: center;
+	max-width: 760px;
+	margin: 0 auto 48px;
+}
+
+.about-intro-head .about-eyebrow {
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: #ad67ea;
+	margin-bottom: 16px;
+}
+
+.about-intro-head blockquote.about-quote {
+	font-size: 1.35rem;
+	font-weight: 500;
+	color: #000;
+	line-height: 1.45;
+	border: none;
+	margin: 0 0 24px;
+	padding: 0;
+	font-style: italic;
+}
+
+.about-intro-head .about-headline {
+	font-size: 1.85rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 20px;
+	line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+	.about-intro-head .about-headline {
+		font-size: 2.25rem;
+	}
+}
+
+.about-intro-head .about-lead-text {
+	text-align: left;
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.about-profile-row {
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.about-profile-row .about-profile-img {
+	position: relative;
+}
+
+.about-profile-row .about-profile-img img {
+	-webkit-box-shadow: -16px -16px 0 0 #ad67ea;
+	box-shadow: -16px -16px 0 0 #ad67ea;
+	border-radius: 2px;
+}
+
+.about-profile-meta {
+	padding-top: 24px;
+}
+
+.about-profile-meta .name-line {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 4px;
+}
+
+.about-profile-meta .role-line {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #ad67ea;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.about-stats {
+	margin-top: 48px;
+	padding-top: 40px;
+	border-top: 1px solid rgba(173, 103, 234, 0.25);
+}
+
+.about-stat-item {
+	text-align: center;
+	padding: 16px 8px;
+}
+
+.about-stat-item .stat-num {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #ad67ea;
+	line-height: 1.2;
+}
+
+.about-stat-item .stat-label {
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #000;
+	margin-top: 8px;
+}
+
+.about-story-title {
+	font-size: 1.65rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.about-story-title::after {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 4px;
+	background: #ad67ea;
+	border-radius: 100px;
+	margin: 20px auto 0;
+}
+
+.about-story-body p {
+	margin-bottom: 1rem;
+}
+
+.about-story-body p:last-child {
+	margin-bottom: 0;
+}
+
+.about-cta-strip {
+	background: linear-gradient(135deg, #ad67ea 0%, #9b5fd4 100%);
+	color: #fff;
+	padding: 64px 0;
+	text-align: center;
+}
+
+.about-cta-strip h2 {
+	color: #fff;
+	font-size: 1.75rem;
+	margin-bottom: 12px;
+}
+
+.about-cta-strip p {
+	opacity: 0.95;
+	max-width: 560px;
+	margin: 0 auto 24px;
+}
+
+.about-cta-strip .btn-white {
+	border-color: rgba(255, 255, 255, 0.85);
+}
+
+.about-cta-strip .btn-transparent {
+	margin-left: 8px;
+}
+
+#testimonials.about-page-testimonials {
+	background: #fff;
+	padding: 90px 0;
+}
