@@ -3,29 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://csmpsicologia.com",
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
-    "rimraf": "^2.6.2",
-    "gh-pages": "^2.0.1"
-  },
   "scripts": {
-    "clear": "rimraf build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "npx serve public -l 3000",
+    "deploy": "gh-pages -d public"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "serve": "^14.2.4"
+  }
 }
