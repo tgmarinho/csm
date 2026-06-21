@@ -1,482 +1,568 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:160">
+    <meta name="author" content="Carla Suzana Marinho">
+    <meta name="description" content="Carla Suzana Marinho, psicóloga clínica e neuropsicóloga em Dourados/MS. Atendimento online para adolescentes e adultos em português e inglês.">
+    <meta name="keywords" content="Carla Suzana Marinho, carlasuzanamarinhopsi, psicóloga clínica, neuropsicóloga, terapia online, adolescentes, adultos, TDAH, ansiedade, brasileiros no exterior">
+    <link rel="canonical" href="https://tgmarinho.github.io/csm/">
+    <link rel="alternate" hreflang="pt-BR" href="https://tgmarinho.github.io/csm/">
+    <link rel="alternate" hreflang="en" href="https://tgmarinho.github.io/csm/en/">
+    <link rel="alternate" hreflang="x-default" href="https://tgmarinho.github.io/csm/">
 
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Psicóloga Clínica - Carla Suzana Marinho">
-      <meta name="author" content="Carla Suzana Marinho">
-      <meta name=”keywords” content=”psicologia, psicologa, dourados, carla suzana marinho, carla, suzana, saude, mental, mente, corpo, unimed, particular”>
-      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>Carla Suzana Marinho | Psicóloga em Dourados/MS e online</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3F556B">
 
-    <meta name="theme-color" content="#fff">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CSM Psicologia">
+    <meta property="og:title" content="Carla Suzana Marinho | Psicóloga em Dourados/MS e online">
+    <meta property="og:description" content="Psicóloga clínica e neuropsicóloga. Atendimento online para adolescentes e adultos em português e inglês.">
+    <meta property="og:url" content="https://tgmarinho.github.io/csm/">
+    <meta property="og:image" content="https://tgmarinho.github.io/csm/assets/img/preview.jpg">
+    <meta property="og:image:secure_url" content="https://tgmarinho.github.io/csm/assets/img/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Carla Suzana Marinho, psicóloga clínica online">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carla Suzana Marinho | Psicóloga em Dourados/MS e online">
+    <meta name="twitter:description" content="Psicóloga clínica e neuropsicóloga. Atendimento online para adolescentes e adultos em português e inglês.">
+    <meta name="twitter:image" content="https://tgmarinho.github.io/csm/assets/img/preview.jpg">
+    <meta name="twitter:image:alt" content="Carla Suzana Marinho, psicóloga clínica online">
 
-	<!--// SITES TITLE // -->
-	<title>Carla Suzana Marinho</title>
+    <link rel="stylesheet" href="assets/css/landing.css">
 
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-	<link rel="manifest" href="assets/img/site.webmanifest">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
-
-
-	<!-- Twitter Card data -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@csmpsicologia">
-	<meta name="twitter:title" content="CSM Psicologia">
-	<meta name="twitter:description" content="Carla Suzana Marinho">
-	<meta name="twitter:creator" content="@csmpsicologia">
-	<!-- Twitter Summary card images must be at least 120x120px -->
-	<meta name="twitter:image" content="https://csmpsicologia.com/img/logo.png">
-
-	<!-- Open Graph data -->
-	<meta property="og:title" content="CSM Psicologia" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://csmpsicologia.com/" />
-	<meta property="og:image" content="https://csmpsicologia.com/img/logo.png" />
-	<meta property="og:description" content="Carla Suzana Marinho" />
-	<meta property="og:site_name" content="CSM Psicologia" />
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="assets/bootstrap-4.1.3-dist/css/bootstrap.min.css">
-	<!-- Core Navigation -->
-	<link rel="stylesheet" href="assets/js/corenav-master/corenav-master/dist/coreNavigation-1.1.3.min.css">
-	<!-- Navbar Style -->
-	<link rel="stylesheet" href="assets/css/navbar-style.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<!-- Line Icons -->
-	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-	<!-- LightBox -->
-	<link rel="stylesheet" href="assets/js/lightbox/dist/css/lightbox.min.css">
-	<!-- Style -->
-	<link rel="stylesheet" href="assets/css/style.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://tgmarinho.github.io/csm/#website",
+            "url": "https://tgmarinho.github.io/csm/",
+            "name": "CSM Psicologia",
+            "inLanguage": "pt-BR",
+            "description": "Site da psicóloga clínica Carla Suzana Marinho.",
+            "publisher": {
+              "@id": "https://tgmarinho.github.io/csm/#psychologist"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://tgmarinho.github.io/csm/#psychologist",
+            "name": "Carla Suzana Marinho",
+            "alternateName": "carlasuzanamarinhopsi",
+            "jobTitle": "Psicóloga clínica e Neuropsicóloga",
+            "url": "https://tgmarinho.github.io/csm/",
+            "image": "https://tgmarinho.github.io/csm/assets/img/preview.jpg",
+            "telephone": "+55-67-99688-2030",
+            "email": "carlasuzanamarinho@gmail.com",
+            "knowsAbout": ["TDAH", "Ansiedade", "Depressão", "Sobrecarga emocional", "Relacionamentos", "Adolescentes", "Neuropsicologia", "Terapia online"],
+            "sameAs": [
+              "https://www.instagram.com/carlasuzanamarinhopsi/",
+              "https://www.facebook.com/csmpsicologia/",
+              "https://www.linkedin.com/in/carla-suzana-oliveira-e-silva-marinho-64092364/"
+            ]
+          },
+          {
+            "@type": ["MedicalBusiness", "LocalBusiness"],
+            "@id": "https://tgmarinho.github.io/csm/#clinic",
+            "name": "CSM Psicologia - Carla Suzana Marinho",
+            "url": "https://tgmarinho.github.io/csm/",
+            "image": "https://tgmarinho.github.io/csm/assets/img/preview.jpg",
+            "telephone": "+55-67-99688-2030",
+            "email": "carlasuzanamarinho@gmail.com",
+            "priceRange": "Consulte",
+            "medicalSpecialty": "Psychology",
+            "founder": {
+              "@id": "https://tgmarinho.github.io/csm/#psychologist"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rua Oliveira Marques, 1430, Centro",
+              "addressLocality": "Dourados",
+              "addressRegion": "MS",
+              "addressCountry": "BR"
+            },
+            "areaServed": ["Dourados/MS", "Brasil", "Brasileiros no exterior", "Pessoas que falam inglês"]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://tgmarinho.github.io/csm/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O atendimento é online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. Carla Suzana Marinho oferece atendimento online para adolescentes e adultos, em português e inglês."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais temas são atendidos?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A terapia pode abordar TDAH, ansiedade, depressão, burnout, sobrecarga emocional, relacionamentos, família e adaptação cultural."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como agendar uma consulta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O agendamento pode ser feito pelo WhatsApp em wa.me/5567996882030, telefone, e-mail ou formulário de contato."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como funciona o pagamento?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Para pacientes no Brasil, o pagamento pode ser combinado via Pix. Para pacientes no exterior, as instruções de pagamento internacional são enviadas de forma privada após a confirmação do horário."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<noscript>
-    Você precisa habilitar o Javascript para executar essa página!
-  </noscript>
+    <header class="site-header" aria-label="Navegação principal" data-animate>
+      <a class="brand" href="#inicio" aria-label="Carla Suzana Marinho Psicóloga">
+        <img src="assets/img/logo_psi_2.png" alt="CSM Psicologia" width="104" height="104">
+        <span>
+          <strong>Carla Suzana Marinho</strong>
+          <small>Psicóloga clínica e Neuropsicóloga</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Seções da página">
+        <a href="#sobre">Sobre</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#consultorio">Consultório</a>
+        <a href="#blog">Blog</a>
+        <a href="#faq">Dúvidas</a>
+        <a class="lang-link" href="en/" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+        <a class="nav-cta" href="https://wa.me/5567996882030" target="_blank" rel="noopener noreferrer">Agendar</a>
+      </nav>
+      <a class="mobile-lang-link" href="en/" hreflang="en" lang="en" aria-label="View this page in English">EN</a>
+      <a class="mobile-nav-cta" href="https://wa.me/5567996882030" target="_blank" rel="noopener noreferrer">Agendar</a>
+    </header>
 
-
-	<!-- ==============================================
-    Preloader
-    =============================================== -->
-
-	<div class="preloader-holder">
-      <div id="loader">
-        <div id="shadow"></div>
-        <div id="box"></div>
-      </div>
-    </div>
-
-    <!-- ==============================================
-      NAVBAR
-      =============================================== -->
-
-    <nav hidden>
-      <div class="nav-header">
-        <!-- Navbar Logo -->
-        <a href="#" class="brand">
-          <img class="scrolled" src="assets/img/logo-light-psi.png" alt="CSM Psicologia">
-          <img class="top" src="assets/img/logo_psi_2.png" alt="CSM Psicologia">
-        </a>
-        <!-- Burger Menu -->
-        <button class="toggle-bar">
-          <span class="fa fa-bars"></span>
-        </button>
-      </div>
-      <!-- Navbar Links -->
-      <ul class="menu">
-        <li class="scrollspy active"><a href="#home">Home</a></li>
-        <li class="scrollspy"><a href="#about">Sobre</a></li>
-        <li class="scrollspy"><a href="#portfolio">Ambiente</a></li>
-        <li class="scrollspy"><a href="#services">Foco</a></li>
-        <!--<li class="scrollspy"><a href="#pricing">Prices</a></li>-->
-        <li class="scrollspy"><a href="#contact">Contato</a></li>
-      </ul>
-    </nav>
-
-    <!-- ==============================================
-      BANNER
-      =============================================== -->
-
-    <section class="slider-area" id="home">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="owl-carousel main-slider">
-            <!-- Single slide 1-->
-            <div class="single-slide slide-bg-1">
-              <div class="col-md-12">
-                <div class="tabel">
-                  <div class="tabel-cell">
-                    <div class="slider-content">
-                      <h3>Carla Suzana Marinho</h3>
-                      <h1>CSM PSICOLOGIA</h1>
-                      <a href="#" class="btn btn-transparent">Agende uma Sessão</a>
-                      <a href="#about" class="btn btn-white">Sobre mim</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- /.single-slide -->
-
-            <!-- Single slide 2 -->
-            <div class="single-slide slide-bg-2">
-              <div class="col-md-12">
-                <div class="tabel">
-                  <div class="tabel-cell">
-                    <div class="slider-content">
-                      <h3>Psicóloga Clínica Cognitiva</h3>
-                      <h1>Carla Suzana Marinho</h1>
-                      <a href="#" class="btn btn-transparent">Agende uma Sessão</a>
-                      <a href="#contact" class="btn btn-white">Contato</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- /.single-slide -->
-
-          </div><!-- /.main-slider -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
-      ABOUT US
-      =============================================== -->
-
-    <section id="about">
-      <div class="container">
-        <h2>Sobre</h2>
-        <div class="row">
-          <div class="col-lg-6 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".4s">
-            <div class="about-img">
-              <img src="assets/img/gallery/about.jpg" class="img-fluid" alt="about">
-            </div>
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy" data-animate>
+          <p class="hero-badge">Atendimento psicológico online</p>
+          <h1 id="hero-title"><span>Carla&nbsp;Suzana</span><span>Marinho</span></h1>
+          <p class="hero-lead">Psicóloga clínica e neuropsicóloga. Atendimento online para adolescentes e adultos.</p>
+          <div class="hero-facts" aria-label="Diferenciais do atendimento">
+            <span>12+ anos de experiência</span>
+            <span>Português e inglês</span>
+            <span>TCC e Neuropsicologia</span>
           </div>
-          <div class="col-lg-6 about-content wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-            <h5>Carla Suzana Oliveira e Silva Marinho</h5>
-            <p>Pós Graduanda em Neuropsicologia pela <a href="https://www.ibneuro.org/" target="_BLANK">IBNeuro</a></p>
-            <p>Mestranda em Psicologia Pela <a href="http://www.bauru.unesp.br/" target="_BLANK">UNESP-Bauru</a> - à defender.</p>
-            <p>Graduada em Psicologia Pela Universidade Federal da Grande Dourados - <a href="https://portal.ufgd.edu.br/" href="_BLANK">UFGD</a> (2014).</p>
-            <p>Psicóloga na Casa de Passagem Equipe Cristo Verdade que Liberta, onde fez acompanhamento psicossocial dos usuários e suas respectivas famílias (2014).</p>
-            <p>Voluntária na World Mobilization, trabalho com crianças e mulheres no Nepal por um ano e meio. (2009)</p>
-            <p>Amiga do Lar Ebenezer (2018)</p>
-            <p> Saiba mais visitando o <a href="https://www.linkedin.com/in/carla-suzana-oliveira-e-silva-marinho-64092364/" target="_BLANK">currículo</a>
+          <div class="hero-actions" aria-label="Ações principais">
+            <a class="btn btn-primary" href="https://wa.me/5567996882030" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+            <a class="btn btn-secondary" href="#sobre">Conhecer minha abordagem</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ==============================================
-      FEATURES
-      =============================================== -->
-
-    <section id="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".2s">
-            <div class="feature-box">
-              <span class="lnr lnr-rocket"></span>
-              <h4>Resultado</h4>
-              <p>Sou focada em resultados, sempre querendo o melhor a cada sessão.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".4s">
-            <div class="feature-box">
-              <span class="lnr lnr-laptop-phone"></span>
-              <h4>Atendimento</h4>
-              <p>Estou sempre conectada aos pacientes.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-            <div class="feature-box">
-              <span class="lnr lnr-bubble"></span>
-              <h4>Conversa</h4>
-              <p>Estou sempre atenta as necessidades dos meus pacientes.</p>
-            </div>
+        <div class="hero-media" aria-label="Consultório de psicologia" data-animate>
+          <img class="hero-main-img" src="assets/img/team.jpg" alt="Carla Suzana Marinho, psicóloga clínica" width="334" height="500" fetchpriority="high">
+          <img class="hero-float hero-float-a" src="assets/img/capa.png" alt="Ambiente acolhedor do consultório CSM Psicologia" width="1920" height="1282" fetchpriority="high">
+          <img class="hero-float hero-float-b" src="assets/img/ambiente/5.jpg" alt="Detalhe do consultório CSM Psicologia" width="1920" height="2876" loading="lazy">
+          <div class="hero-note">
+            <span>Terapia online</span>
+            <strong>Português e inglês para brasileiros no Brasil e no exterior, e para pessoas que falam inglês.</strong>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==============================================
-      PORTFOLIO
-      =============================================== -->
+      <section class="focus-row" aria-label="Informações rápidas" data-animate>
+        <div>
+          <span>Modalidade</span>
+          <strong>Online</strong>
+          <small>Atendimento com sigilo e combinados claros.</small>
+        </div>
+        <div>
+          <span>Foco</span>
+          <strong>Adolescentes e adultos</strong>
+          <small>Escuta adequada à fase de vida.</small>
+        </div>
+        <div>
+          <span>Temas</span>
+          <strong>Ansiedade, TDAH e relações</strong>
+          <small>Cuidado sem promessas ou julgamentos.</small>
+        </div>
+        <div>
+          <span>Idiomas</span>
+          <strong>PT / EN</strong>
+          <small>Para brasileiros no Brasil, no exterior e pessoas que falam inglês.</small>
+        </div>
+      </section>
 
-    <section id="portfolio">
-      <div class="svg-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 3600 248">
-          <path d="M3601,31.227S2736.31,201.97,1661,72.2C547.345-62.2,0,32.227,0,32.227V343H3602Z"></path>
-        </svg>
-      </div>
-      <div class="container-fluid wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-        <h2>Ambiente</h2>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 portfolio-item">
-            <div class="item-img">
-              <img src="assets/img/ambiente/1.jpg" alt="1">
-            </div>
-            <div class="item-info">
-              <h3 class="heading-3">Portfolio Item</h3>
-              <p class="p-text">This handy tool helps you create dummy text for all your layout needs.</p>
-              <a href="https://github.com/tgmarinho/cspsicologia-new/blob/master/assets/img/gallery/1.jpg" data-lightbox="image-1" data-title="Portfolio Item" class="link-text">Full VIew</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 portfolio-item">
-            <div class="item-img">
-              <img src="assets/img/ambiente/5.jpg" alt="2">
-            </div>
-            <div class="item-info">
-              <h3 class="heading-3">Portfolio Item</h3>
-              <p class="p-text">This handy tool helps you create dummy text for all your layout needs.</p>
-              <a href="https://github.com/tgmarinho/cspsicologia-new/blob/master/assets/img/gallery/2.jpg" data-lightbox="image-2" data-title="Portfolio Item" class="link-text">Full VIew</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 portfolio-item">
-            <div class="item-img">
-              <img src="assets/img/ambiente/2.jpg" alt="3">
-            </div>
-            <div class="item-info">
-              <h3 class="heading-3">Portfolio Item</h3>
-              <p class="p-text">This handy tool helps you create dummy text for all your layout needs.</p>
-              <a href="https://github.com/tgmarinho/cspsicologia-new/blob/master/assets/img/gallery/3.jpg" data-lightbox="image-3" data-title="Portfolio Item" class="link-text">Full VIew</a>
-            </div>
-          </div>
-      </div>
-    </section>
+      <section class="visual-strip" aria-label="Prévia visual do consultório" data-animate>
+        <div class="strip-track">
+          <img src="assets/img/capa2.png" alt="Consultório CSM Psicologia" width="1920" height="1282" loading="lazy">
+          <img src="assets/img/gallery/about.jpg" alt="Carla Suzana Marinho no consultório" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/ambiente/1.jpg" alt="Sala de atendimento psicológico" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/ambiente/2.jpg" alt="Ambiente terapêutico em Dourados" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/ambiente/5.jpg" alt="Detalhe do consultório" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/capa2.png" alt="" width="1920" height="1282" loading="lazy" aria-hidden="true">
+          <img src="assets/img/gallery/about.jpg" alt="" width="1920" height="2876" loading="lazy" aria-hidden="true">
+          <img src="assets/img/ambiente/1.jpg" alt="" width="1920" height="2876" loading="lazy" aria-hidden="true">
+          <img src="assets/img/ambiente/2.jpg" alt="" width="1920" height="2876" loading="lazy" aria-hidden="true">
+          <img src="assets/img/ambiente/5.jpg" alt="" width="1920" height="2876" loading="lazy" aria-hidden="true">
+        </div>
+      </section>
 
-    <!-- ==============================================
-      CALL TO ACTION
-      =============================================== -->
-
-    <section id="call-to-action">
-      <div class="container">
-        <h1 class="wow fadeInDown" data-wow-duration=".2s" data-wow-delay=".4s">Como é bom estar em paz consigo mesmo.</h1>
-        <a href="#" class="btn btn-transparent wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">Como é bom fazer terapia</a>
-      </div>
-    </section>
-
-    <!-- ==============================================
-      SERVICES
-      =============================================== -->
-
-    <section id="services">
-      <div class="container">
-        <h2>Foco</h2>
-        <div class="row">
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".2s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-smartphone"></span>
-              </div>
-              <div class="service-content">
-                <h5>Atendimento</h5>
-                <p>Crianças a partir de 1 mês (Problemas de Aprendizagem, Necessidades Especiais), Adultos (Terapia Individual, Casal, Drogadictos).</p>
-              </div>
-            </div>
+      <section class="section intro-section" id="sobre" aria-labelledby="sobre-title" data-animate>
+        <div class="section-kicker">Sobre a profissional</div>
+        <div class="intro-grid">
+          <div>
+            <h2 id="sobre-title">Prazer, sou Carla Suzana Marinho.</h2>
+            <p class="section-lead">Psicóloga clínica, neuropsicóloga e terapeuta cognitivo-comportamental.</p>
           </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".4s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-store"></span>
-              </div>
-              <div class="service-content">
-                <h5>Diferencial</h5>
-                <p>Acompanhamento do desenvolvimento do bebê de zero a dois anos.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-chart-bars"></span>
-              </div>
-              <div class="service-content">
-                <h5>Missão</h5>
-                <p>Oferecer aos pacientes e familiares a gestão da saúde mental e bem estar com excelência e humanidade por meio do Modelo Cognitivo Comportamental, acompanhando os avanços na psicologia e contribuir para a melhoria na qualidade de vida.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".2s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-laptop-phone"></span>
-              </div>
-              <div class="service-content">
-                <h5>Visão</h5>
-                <p>Ser reconhecido como um consultório de excelência na gestão do conhecimento da psicologia e compromisso com a vida</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".4s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-code"></span>
-              </div>
-              <div class="service-content">
-                <h5>Valores</h5>
-                <p>Humanização: Atendimento com respeito ao bem-estar de pacientes e familiares.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-            <div class="service">
-              <div class="service-icon">
-                <span class="lnr lnr-layers"></span>
-              </div>
-              <div class="service-content">
-                <h5>Excelência</h5>
-                <p>Contínua busca de conhecimento e de recursos disponíveis para atender aos pacientes e familiares.</p>
-              </div>
-            </div>
+          <div class="rich-text">
+            <p>Sou psicóloga clínica formada pela UFGD, neuropsicóloga pela IBNeuro e terapeuta cognitivo-comportamental pela PUC-PR. Há mais de 12 anos acompanho adolescentes, adultos e famílias em sua jornada de cuidado com a saúde mental.</p>
+            <p>Minha trajetória também inclui formação em Desenvolvimento Humano e Aprendizagem pela Unesp - Bauru e anos de atuação com crianças, adolescentes, famílias e contexto escolar.</p>
+            <p>Atendo brasileiros no Brasil e no exterior, além de pessoas de outras nacionalidades que se comunicam em inglês. Essa experiência ampliou meu olhar para adaptação, pertencimento, identidade e construção de novos caminhos.</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-8 col-sm-offset-2 text-center mx-auto bottom-caption wow fadeInDown" data-wow-duration=".2s" data-wow-delay=".4s">
-            <p>Sempre respeito e cuido dos meus pacientes! Sempre desejando o bem estar emocional, mental e físico.</p>
-            <a href="#" class="btn btn-primary">Agende sua consulta</a>
+      </section>
+
+      <section class="profile-band" aria-label="Perfil profissional" data-animate>
+        <div class="profile-photo">
+          <img src="assets/img/gallery/about.jpg" alt="Carla Suzana Marinho, psicóloga clínica" width="1920" height="2876" loading="lazy">
+        </div>
+        <div class="profile-panel">
+          <p class="eyebrow">Abordagem</p>
+          <h2>Terapia como espaço seguro de acolhimento, autoconhecimento e transformação.</h2>
+          <p>Acredito que a terapia vai além do alívio dos sintomas. Ela pode ajudar cada pessoa a viver com mais clareza, equilíbrio e propósito.</p>
+          <ul class="check-list">
+            <li>Atendimento online.</li>
+            <li>Português e Inglês.</li>
+            <li>Mais de 12 anos de experiência clínica.</li>
+            <li>Neuropsicologia e terapia cognitivo-comportamental.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="atendimento" aria-labelledby="atendimento-title" data-animate>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Quem posso ajudar</p>
+            <h2 id="atendimento-title">Encontre o cuidado que conversa com sua fase</h2>
+          </div>
+          <p>Cada tema abre uma página com orientação inicial e caminhos de cuidado.</p>
+        </div>
+        <div class="care-summary" aria-label="Características do atendimento">
+          <div>
+            <span>01</span>
+            <strong>Escuta clínica</strong>
+            <p>Atendimento reservado para compreender demandas com calma, sigilo e respeito.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Estratégias possíveis</strong>
+            <p>Construção de caminhos realistas para rotina, emoções e relações.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Online e bilíngue</strong>
+            <p>Sessões em português ou inglês para brasileiros no Brasil e no exterior, e para pessoas que falam inglês.</p>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="service-grid">
+          <a class="service-card" href="temas/tdah.html">
+            <span>TDAH</span>
+            <h3>Atenção, organização e autocobrança</h3>
+            <p>Para adolescentes e adultos que desejam compreender seu funcionamento com mais acolhimento.</p>
+          </a>
+          <a class="service-card" href="temas/ansiedade.html">
+            <span>Ansiedade</span>
+            <h3>Preocupação, medo e corpo em alerta</h3>
+            <p>Um espaço para entender padrões ansiosos e construir estratégias possíveis.</p>
+          </a>
+          <a class="service-card" href="temas/depressao.html">
+            <span>Depressão</span>
+            <h3>Desânimo, isolamento e perda de energia</h3>
+            <p>Cuidado ético para olhar a dor emocional sem julgamento.</p>
+          </a>
+          <a class="service-card" href="temas/burnout.html">
+            <span>Burnout</span>
+            <h3>Sobrecarga emocional</h3>
+            <p>Para quem sente o peso da rotina, do trabalho e da autocobrança.</p>
+          </a>
+          <a class="service-card" href="temas/relacionamentos.html">
+            <span>Relações</span>
+            <h3>Relacionamentos e família</h3>
+            <p>Limites, comunicação, vínculos familiares e padrões relacionais.</p>
+          </a>
+          <a class="service-card" href="temas/adolescentes.html">
+            <span>Adolescentes</span>
+            <h3>Atendimento para adolescentes</h3>
+            <p>Escuta para desenvolvimento, emoções, família, escola e identidade.</p>
+          </a>
+          <a class="service-card" href="temas/brasileiros-no-exterior.html">
+            <span>Exterior</span>
+            <h3>Brasileiros no exterior</h3>
+            <p>Apoio para adaptação, pertencimento e vida emocional longe do país de origem.</p>
+          </a>
+        </div>
+      </section>
 
-
-    <!-- ==============================================
-      TEAM
-      =============================================== -->
-
-    <section id="team">
-      <div class="container">
-        <h2>CSMPSICOLOGIA</h2>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 wow fadeInRight" data-wow-duration=".2s" data-wow-delay=".2s">
-            <div class="team-member">
-              <div class="team-img">
-                <img src="assets/img/team.jpg" class="img-fluid" alt="team-1">
+      <section class="session-section" aria-labelledby="session-title" data-animate>
+        <div class="session-card">
+          <div class="session-copy">
+            <p class="section-kicker">Primeira sessão</p>
+            <h2 id="session-title">Como começa o processo terapêutico?</h2>
+            <div class="session-steps">
+              <div>
+                <span>1</span>
+                <strong>Acolhimento</strong>
+                <p>Você fala sobre o momento atual, suas dúvidas e o que motivou a busca por terapia.</p>
               </div>
-              <div class="team-caption">
-                <h4>Carla Marinho</h4>
-                <p>Psicóloga</p>
-                <ul class="social-media">
-                  <li><a href="https://www.facebook.com/csmpsicologia/" target="_BLANK"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="https://www.instagram.com/csmpsicologia/" target="_BLANK"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/carla-suzana-oliveira-e-silva-marinho-64092364/"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
+              <div>
+                <span>2</span>
+                <strong>Compreensão da demanda</strong>
+                <p>Observamos padrões de pensamentos, emoções, rotina e relações que aparecem no sofrimento.</p>
+              </div>
+              <div>
+                <span>3</span>
+                <strong>Plano de cuidado</strong>
+                <p>Combinamos próximos passos possíveis, sempre respeitando seu ritmo e sua história.</p>
               </div>
             </div>
           </div>
+          <img src="assets/img/capa2.png" alt="Carla Suzana Marinho em ambiente de atendimento online" width="1920" height="1282" loading="lazy">
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ==============================================
-      CONTACT
-      =============================================== -->
-
-    <section id="contact">
-      <div class="svg-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 3600 248">
-          <path d="M3601,31.227S2736.31,201.97,1661,72.2C547.345-62.2,0,32.227,0,32.227V343H3602Z"></path>
-        </svg>
-      </div>
-      <div class="container">
-        <h2>Contato</h2>
-        <div class="row">
-          <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".4s">
-            <h4>Fale comigo</h4>
-            <a href="#" class="email-link">carlasuzanamarinho@gmail.com</a>
-            <p>+55 (67) 9 9688 2030</p>
-            <p>Rua Oliveira Marques, 1430, Centro - Dourados/MS <b>Brasil</b></p>
-            <ul class="social-media">
-              <li><a href="https://www.facebook.com/csmpsicologia/" target="_BLANK"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://www.instagram.com/csmpsicologia/" target="_BLANK"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/carla-suzana-oliveira-e-silva-marinho-64092364/"><i class="fab fa-linkedin"></i></a></li>
+      <section class="section payment-section" aria-labelledby="payment-title" data-animate>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Pagamentos</p>
+            <h2 id="payment-title">Opções para Brasil e exterior</h2>
+          </div>
+          <p>Após a confirmação do horário, os dados de pagamento são enviados em conversa privada, com orientação clara sobre prazo, comprovante e moeda.</p>
+        </div>
+        <div class="payment-grid">
+          <article class="payment-card">
+            <span>Brasil</span>
+            <h3>Pagamento via Pix</h3>
+            <p>Para pacientes no Brasil, o pagamento pode ser feito por Pix. A chave e os dados necessários são informados pelo WhatsApp no momento do agendamento.</p>
+            <ul>
+              <li>Confirmação do horário</li>
+              <li>Envio da chave Pix</li>
+              <li>Comprovante na conversa</li>
             </ul>
+          </article>
+          <article class="payment-card featured">
+            <span>Exterior</span>
+            <h3>Pagamento internacional</h3>
+            <p>Para brasileiros no exterior, o pagamento pode ser combinado com instruções internacionais conforme país, moeda e plataforma disponível.</p>
+            <ul>
+              <li>Dados enviados de forma privada</li>
+              <li>Moeda e prazo combinados antes da sessão</li>
+              <li>Taxas podem variar conforme banco ou plataforma</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section trust-section" aria-labelledby="trust-title" data-animate>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Confiança no atendimento</p>
+            <h2 id="trust-title">Um processo cuidado com sigilo, respeito e escuta</h2>
           </div>
-          <div class="col-lg-8 wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-            <h4>Envie uma mensagem</h4>
-            <form method="post" action="/success" name="contact" netlify>
-              <div class="row">
-                <div class="col">
-                  <input type="email" name="email" class="form-control" placeholder="Seu email:">
-                </div>
-                <div class="col">
-                  <input type="text" name="name" class="form-control" placeholder="Seu nome:">
-                </div>
-              </div>"
-              <!-- Form Group -->
-              <div class="form-group wow fadeInLeft" data-wow-duration=".2s" data-wow-delay=".6s">
-                <textarea id="form-message" cols="30" name="message" rows="5" class="form-control" placeholder="Sua mensagem:" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+          <p>Por compromisso ético com a privacidade, este site não publica testemunhos de pacientes. Os cards abaixo mostram princípios que orientam o atendimento.</p>
+        </div>
+        <div class="trust-card-grid">
+          <article class="trust-card">
+            <span>Escuta</span>
+            <p>Um espaço para falar sobre o que está difícil sem julgamentos, no seu ritmo e com atenção à sua história.</p>
+          </article>
+          <article class="trust-card">
+            <span>Clareza</span>
+            <p>As sessões ajudam a organizar pensamentos, emoções e padrões que podem estar pesando na rotina.</p>
+          </article>
+          <article class="trust-card">
+            <span>Estratégia</span>
+            <p>O cuidado é construído com próximos passos possíveis, respeitando limites, contexto e momento de vida.</p>
+          </article>
+          <article class="trust-card">
+            <span>Sigilo</span>
+            <p>A privacidade de cada pessoa atendida é preservada como parte essencial da relação terapêutica.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-section" aria-label="Mensagem da CSM Psicologia" data-animate>
+        <p>Como é bom estar em paz consigo mesmo.</p>
+        <a class="btn btn-light" href="#contato">Conversar sobre terapia</a>
+      </section>
+
+      <section class="section consultorio" id="consultorio" aria-labelledby="consultorio-title" data-animate>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Consultório</p>
+            <h2 id="consultorio-title">Ambiente pensado para acolher</h2>
           </div>
+            <p>Um espaço reservado para escuta, elaboração e cuidado, com atendimento online e acolhimento profundo.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="assets/img/ambiente/1.jpg" alt="Sala de atendimento da CSM Psicologia" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/ambiente/5.jpg" alt="Detalhe do ambiente terapêutico" width="1920" height="2876" loading="lazy">
+          <img src="assets/img/ambiente/2.jpg" alt="Consultório acolhedor em Dourados/MS" width="1920" height="2876" loading="lazy">
+        </div>
+      </section>
+
+      <section class="section blog-preview" id="blog" aria-labelledby="blog-title" data-animate>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Blog</p>
+            <h2 id="blog-title">Textos para começar a entender seu cuidado emocional</h2>
+          </div>
+          <p>Conteúdos introdutórios sobre terapia, TCC, ansiedade, TDAH, depressão e atendimento online para adultos.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <span>Terapia</span>
+            <h3><a href="blog/importancia-da-terapia.html">Por que fazer terapia mesmo quando a vida parece seguir?</a></h3>
+            <p>Um texto para entender terapia como cuidado contínuo, não apenas como último recurso.</p>
+          </article>
+          <article class="blog-card">
+            <span>TCC</span>
+            <h3><a href="blog/terapia-cognitivo-comportamental.html">Como funciona a terapia cognitivo-comportamental?</a></h3>
+            <p>Conheça a relação entre pensamentos, emoções e comportamentos no processo terapêutico.</p>
+          </article>
+          <article class="blog-card">
+            <span>Ansiedade</span>
+            <h3><a href="blog/ansiedade-quando-buscar-terapia.html">Quando a ansiedade começa a pedir cuidado?</a></h3>
+            <p>Sinais de alerta para observar quando a preocupação vira peso na rotina.</p>
+          </article>
+          <article class="blog-card">
+            <span>TDAH</span>
+            <h3><a href="blog/tdah-em-adultos-e-terapia.html">TDAH em adultos: como a terapia pode ajudar?</a></h3>
+            <p>Organização, autocobrança e atenção vistos com acolhimento e estratégia.</p>
+          </article>
+          <article class="blog-card">
+            <span>Depressão</span>
+            <h3><a href="blog/depressao-e-cuidado-emocional.html">Depressão não é fraqueza: é pedido de cuidado</a></h3>
+            <p>Uma conversa sobre sofrimento emocional, energia baixa e busca por apoio.</p>
+          </article>
+          <article class="blog-card">
+            <span>Online</span>
+            <h3><a href="blog/terapia-online-para-brasileiros-fora.html">Terapia online para brasileiros vivendo fora</a></h3>
+            <p>Como a escuta em português pode apoiar fases de adaptação e distância.</p>
+          </article>
+        </div>
+        <div class="blog-actions">
+          <a class="btn btn-secondary" href="blog/">Ver todos os artigos</a>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title" data-animate>
+        <div class="section-heading compact">
+          <p class="section-kicker">Dúvidas frequentes</p>
+          <h2 id="faq-title">Antes de agendar</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Como funciona a terapia online?</summary>
+            <p>As sessões acontecem por videochamada, em ambiente reservado, com sigilo e combinados claros de horário, duração e frequência.</p>
+          </details>
+          <details>
+            <summary>Você atende adolescentes?</summary>
+            <p>Sim. O atendimento para adolescentes considera desenvolvimento, família, escola, emoções e contexto de vida.</p>
+          </details>
+          <details>
+            <summary>Você atende brasileiros que moram fora do Brasil?</summary>
+            <p>Sim. O atendimento online permite acompanhar brasileiros no exterior em português, respeitando contexto cultural e fase de adaptação.</p>
+          </details>
+          <details>
+            <summary>As sessões podem ser realizadas em inglês?</summary>
+            <p>Sim. As sessões podem ser realizadas em português ou inglês, incluindo atendimento para pessoas de outras nacionalidades que se comunicam em inglês.</p>
+          </details>
+          <details>
+            <summary>Qual a duração das sessões?</summary>
+            <p>A duração e frequência são combinadas no início do processo terapêutico, de acordo com avaliação e disponibilidade.</p>
+          </details>
+          <details>
+            <summary>Você atende convênios?</summary>
+            <p>Entre em contato pelo WhatsApp para confirmar as possibilidades atuais de atendimento e pagamento.</p>
+          </details>
+          <details>
+            <summary>Como funciona o pagamento?</summary>
+            <p>Para pacientes no Brasil, o pagamento pode ser feito via Pix. Para pacientes no exterior, as instruções de pagamento internacional são enviadas de forma privada após a confirmação do horário.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contato" aria-labelledby="contato-title" data-animate>
+        <div class="contact-card">
+          <div class="contact-copy">
+            <p class="section-kicker">Contato</p>
+            <h2 id="contato-title">Quero agendar uma conversa</h2>
+            <p>Envie uma mensagem para tirar dúvidas sobre disponibilidade, formato do atendimento e próximos passos.</p>
+            <address>
+              <a href="mailto:carlasuzanamarinho@gmail.com">carlasuzanamarinho@gmail.com</a>
+              <a href="tel:+5567996882030">+55 (67) 99688-2030</a>
+              <span>Terapia online para adultos</span>
+            </address>
+            <div class="social-links" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/carlasuzanamarinhopsi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.facebook.com/csmpsicologia/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.linkedin.com/in/carla-suzana-oliveira-e-silva-marinho-64092364/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          <form class="contact-form" method="post" action="/success" name="contact" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+            <label>
+              Nome
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+              Mensagem
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="assets/img/logo_psi_2.png" alt="CSM Psicologia" width="107" height="83" loading="lazy">
+        <div>
+        <p>Carla Suzana Marinho - Psicóloga clínica</p>
+        <p>Tudo o que é verdadeiro, respeitável, justo, puro, amável e de boa fama ocupe o pensamento. Filipenses 4:8</p>
         </div>
       </div>
-    </section>
-
-    <!-- ==============================================
-      FOOTER
-      =============================================== -->
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <p>&copy; 2018 Desenvolvido por <a href="https://twitter.com/tgmarinho">@tgmarinho.</a></p>
-          </div>
-          <div class="col-lg-6 text-right">
-            <p><a href="https://gumroad.com/smdesigns"><b>Obrigada pela visita!</b></a></p>
-          </div>
-        </div>
+      <div class="footer-links" aria-label="Links de contato">
+        <a href="https://wa.me/5567996882030" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.instagram.com/carlasuzanamarinhopsi/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:carlasuzanamarinho@gmail.com">E-mail</a>
       </div>
     </footer>
-
-    <!-- // JS FILES // -->
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-    <!-- Core Navigation -->
-    <script src="assets/js/corenav-master/corenav-master/dist/coreNavigation-1.1.3.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Wow -->
-    <script src="assets/js/wow-1.3.0.min.js"></script>
-    <!-- LightBox -->
-    <script src="assets/js/lightbox/dist/js/lightbox.min.js"></script>
-    <!-- Custom -->
-    <script src="assets/js/custom.js"></script>
-
-
-
+    <script src="assets/js/site.js" defer></script>
   </body>
-
-  </html>
+</html>
