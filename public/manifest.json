@@ -3,7 +3,8 @@
   "short_name": "CSM",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "#F4EFEF",
+  "theme_color": "#3F556B",
   "description": "Psicóloga Clínica Carla Suzana Marinho",
   "icons": [
     {
@@ -32,7 +33,7 @@
       "type": "image/png"
     },
     {
-      "src": "img/logo_psi_2.png",
+      "src": "assets/img/logo_psi_2.png",
       "sizes": "192x192",
       "type": "image/png"
     }
