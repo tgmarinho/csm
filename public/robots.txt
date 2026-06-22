@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tgmarinho.github.io/csm/sitemap.xml
+Sitemap: https://csmpsicologia.com/sitemap.xml

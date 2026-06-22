@@ -4,11 +4,9 @@
   "private": true,
   "homepage": "https://csmpsicologia.com",
   "scripts": {
-    "start": "npx serve public -l 3000",
-    "deploy": "gh-pages -d public"
+    "start": "npx serve public -l 3000"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
     "serve": "^14.2.4"
   }
 }
