@@ -21,7 +21,7 @@ O público principal são pessoas procurando atendimento psicológico para si, f
 - Imagens, ícones e preview social ficam em `public/assets/img/`.
 - Capturas de referência visual ficam em `docs/`.
 - Rode localmente com `npm start` e abra `http://localhost:3000`.
-- Deploy com `npm run deploy`.
+- Deploy pela Netlify, publicando a pasta `public/`.
 
 Não introduza frameworks, bundlers ou dependências novas sem necessidade. O projeto deve continuar simples, estático e fácil de publicar.
 
@@ -62,7 +62,7 @@ Mantenha:
 - Uma única tag `h1` por página principal.
 - `lang="pt-BR"` na versão em português e `lang="en"` na versão em inglês.
 - Title e description focados em "psicóloga em Dourados/MS", terapia online e públicos atendidos.
-- Canonical atual para `https://tgmarinho.github.io/csm/` e, na versão em inglês, `https://tgmarinho.github.io/csm/en/`.
+- Canonical atual para `https://csmpsicologia.com/` e, na versão em inglês, `https://csmpsicologia.com/en/`.
 - `hreflang` entre as versões PT-BR e EN.
 - Open Graph e Twitter Card com `public/assets/img/preview.jpg`.
 - JSON-LD com `WebSite`, `Person`, `LocalBusiness`/`MedicalBusiness` e `FAQPage`.

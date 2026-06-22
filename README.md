@@ -11,7 +11,7 @@ O projeto publica uma landing page bilíngue, páginas educativas por tema e blo
 - JavaScript leve em `public/assets/js/site.js`.
 - Imagens reais e favicons em `public/assets/img/`.
 - Formulário compatível com Netlify Forms.
-- Deploy da pasta `public/` via `gh-pages`.
+- Deploy pela Netlify usando `public/` como diretório publicado.
 
 Não há framework, bundler ou etapa de build.
 
@@ -23,11 +23,7 @@ npm start
 
 Serve `public/` em `http://localhost:3000`.
 
-```bash
-npm run deploy
-```
-
-Publica `public/` na branch `gh-pages`.
+O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo `netlify.toml` já define essa configuração.
 
 ## Estrutura
 
@@ -53,7 +49,7 @@ Manter a implementação atual alinhada a:
 - Uma única tag `h1` por página principal.
 - `lang="pt-BR"` na home e `lang="en"` na versão em inglês.
 - Title e meta description focados em psicóloga em Dourados/MS, terapia online e públicos atendidos.
-- Canonicals e `hreflang` usando a base publicada atual: `https://tgmarinho.github.io/csm/`.
+- Canonicals e `hreflang` usando a base publicada atual: `https://csmpsicologia.com/`.
 - Open Graph e Twitter Card com `public/assets/img/preview.jpg`.
 - JSON-LD com `WebSite`, `Person`, `LocalBusiness`/`MedicalBusiness` e `FAQPage`.
 - Respostas diretas em FAQs, sem exagero de palavras-chave.
