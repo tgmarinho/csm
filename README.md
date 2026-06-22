@@ -61,19 +61,9 @@ Manter a implementação atual alinhada a:
 
 ## Conteúdo
 
-Use linguagem acolhedora, objetiva e ética. O site pode explicar formação, abordagem clínica, públicos atendidos, endereço, atendimento online e formas de contato.
+Use linguagem acolhedora, objetiva e ética. O site pode explicar formação, abordagem clínica, públicos atendidos, atendimento online e formas de contato.
 
 Evite promessas de cura, garantias de resultado, diagnósticos, aconselhamento psicológico individualizado, depoimentos de pacientes e urgência comercial agressiva. Quando faltar uma informação profissional, não invente.
-
-## Contato
-
-Preserve estes dados enquanto não houver orientação contrária:
-
-- WhatsApp: `https://wa.me/5567996882030`
-- Telefone: `+55 (67) 99688-2030`
-- E-mail: `carlasuzanamarinho@gmail.com`
-- Endereço: `Rua Oliveira Marques, 1430, Centro - Dourados/MS`
-- Formulário: `name="contact"` e `data-netlify="true"`
 
 ## Checklist
 
