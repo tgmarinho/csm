@@ -1,189 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
   <url>
     <loc>https://csmpsicologia.com/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/sobre.html</loc>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/tdah.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/ansiedade.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/depressao.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/burnout.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/relacionamentos.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/adolescentes.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/temas/brasileiros-no-exterior.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/importancia-da-terapia.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/"/>
   </url>
+
+  <!-- Links -->
   <url>
-    <loc>https://csmpsicologia.com/en/topics/adhd.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <loc>https://csmpsicologia.com/links/</loc>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Sobre -->
+  <url>
+    <loc>https://csmpsicologia.com/sobre.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Temas / Topics -->
+  <url>
+    <loc>https://csmpsicologia.com/temas/terapia-online.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/terapia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/online-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/terapia-online.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/en/topics/online-therapy.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/terapia-online.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/online-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/terapia-online.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/atendimento-em-portugues-e-ingles.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/atendimento-em-portugues-e-ingles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/portuguese-english.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/atendimento-em-portugues-e-ingles.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/en/topics/portuguese-english.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/atendimento-em-portugues-e-ingles.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/portuguese-english.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/atendimento-em-portugues-e-ingles.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/ansiedade.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/ansiedade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/anxiety.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/ansiedade.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/anxiety.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/ansiedade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/anxiety.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/ansiedade.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/tdah.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/tdah.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/adhd.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/tdah.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/en/topics/adhd.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/tdah.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/adhd.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/tdah.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/depressao.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/depressao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/depressao.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/depression.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/depressao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/depressao.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/burnout.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/burnout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/burnout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/burnout.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/burnout.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/burnout.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/burnout.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/burnout.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/relacionamentos.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/relacionamentos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/relationships.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/relacionamentos.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/relationships.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/relacionamentos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/relationships.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/relacionamentos.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/adolescentes.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/adolescentes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/teenagers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/adolescentes.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/teenagers.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/adolescentes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/teenagers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/adolescentes.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/temas/brasileiros-no-exterior.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/brasileiros-no-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/brazilians-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/brasileiros-no-exterior.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/topics/brazilians-abroad.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/temas/brasileiros-no-exterior.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/topics/brazilians-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/temas/brasileiros-no-exterior.html"/>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://csmpsicologia.com/blog/</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/</loc>
-    <lastmod>2026-06-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/importancia-da-terapia.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/importancia-da-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/why-therapy-matters.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/importancia-da-terapia.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/why-therapy-matters.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/importancia-da-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/why-therapy-matters.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/importancia-da-terapia.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/how-cognitive-behavioral-therapy-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/how-cognitive-behavioral-therapy-works.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/how-cognitive-behavioral-therapy-works.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/terapia-cognitivo-comportamental.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/anxiety-when-to-seek-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/anxiety-when-to-seek-therapy.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/anxiety-when-to-seek-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/ansiedade-quando-buscar-terapia.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/adhd-in-adults-and-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/adhd-in-adults-and-therapy.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/adhd-in-adults-and-therapy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/tdah-em-adultos-e-terapia.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/depression-and-emotional-care.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/depression-and-emotional-care.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/depression-and-emotional-care.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/depressao-e-cuidado-emocional.html"/>
+  </url>
+  <url>
+    <loc>https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/online-therapy-for-brazilians-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html"/>
   </url>
   <url>
     <loc>https://csmpsicologia.com/en/blog/online-therapy-for-brazilians-abroad.html</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://csmpsicologia.com/en/blog/online-therapy-for-brazilians-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://csmpsicologia.com/blog/terapia-online-para-brasileiros-fora.html"/>
   </url>
+
 </urlset>

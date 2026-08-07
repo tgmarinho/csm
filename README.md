@@ -10,7 +10,8 @@ O projeto publica uma landing page bilíngue, páginas educativas por tema e blo
 - CSS próprio em `public/assets/css/landing.css`.
 - JavaScript leve em `public/assets/js/site.js`.
 - Imagens reais e favicons em `public/assets/img/`.
-- Formulário compatível com Netlify Forms.
+- Fotos da profissional em `public/assets/img/carla/`.
+- Headers e redirects da Netlify em `public/_headers` e `public/_redirects`.
 - Deploy pela Netlify usando `public/` como diretório publicado.
 
 Não há framework, bundler ou etapa de build.
@@ -21,7 +22,7 @@ Não há framework, bundler ou etapa de build.
 npm start
 ```
 
-Serve `public/` em `http://localhost:3000`.
+Serve `public/` em `http://localhost:3838`.
 
 O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo `netlify.toml` já define essa configuração.
 
@@ -29,17 +30,20 @@ O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo 
 
 - `public/index.html`: landing principal em português.
 - `public/en/index.html`: landing em inglês.
-- `public/success.html`: retorno do formulário.
 - `public/404.html`: página de erro.
 - `public/sobre.html`: página antiga sobre a profissional, mantida no projeto.
 - `public/blog/`: índice e artigos em português.
 - `public/en/blog/`: índice e artigos em inglês.
 - `public/temas/`: páginas de temas em português.
 - `public/en/topics/`: páginas de temas em inglês.
+- `public/links/`: página compacta de links para redes sociais e contato.
+- `public/assets/css/links.css`: CSS da página de links.
+- `public/assets/js/links.js`: JavaScript leve da página de links.
 - `public/robots.txt`: orientação para crawlers.
 - `public/sitemap.xml`: URLs indexáveis.
 - `public/llms.txt`: resumo factual para assistentes de IA.
-- `docs/`: capturas de referência visual.
+- `.context/`: capturas e arquivos temporários de agentes locais, não versionados.
+- `output/`: artefatos locais de validação, não versionados.
 - `AGENTS.md`: regras para agentes de IA editarem o repositório.
 
 ## SEO e AI SEO
@@ -63,9 +67,10 @@ Evite promessas de cura, garantias de resultado, diagnósticos, aconselhamento p
 
 ## Checklist
 
-- Rodar `npm start` e revisar `http://localhost:3000`.
+- Rodar `npm start` e revisar `http://localhost:3838`.
 - Conferir desktop e mobile.
 - Verificar links de WhatsApp, telefone, e-mail, idiomas e navegação interna.
 - Confirmar imagens carregando sem caminhos quebrados.
 - Validar que SEO, sitemap e `llms.txt` acompanham mudanças de URL.
+- Manter capturas, caches e saídas de Playwright fora do Git.
 - Manter mudanças pequenas, estáticas e fáceis de publicar.

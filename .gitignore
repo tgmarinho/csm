@@ -7,11 +7,17 @@
 
 # testing
 /coverage
+/.playwright-cli
+/output
+test-results
+playwright-report
+*.webm
 
 # production
 /build
 
 # misc
+.context
 .DS_Store
 .env.local
 .env.development.local
