@@ -1,4 +1,62 @@
+# robots.txt - CSM Psicologia (Carla Suzana Marinho)
+# https://csmpsicologia.com
+
+# Conteúdo público e indexável do site oficial
 User-agent: *
 Allow: /
 
+# Crawlers de IA / motores de resposta (GEO/AEO) - acesso explicitamente liberado
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Recursos para máquinas
 Sitemap: https://csmpsicologia.com/sitemap.xml
+# Guia para modelos de linguagem: https://csmpsicologia.com/llms.txt

@@ -18,9 +18,12 @@ O público principal são pessoas procurando atendimento psicológico para si, f
 - O blog em português fica em `public/blog/`.
 - O blog em inglês fica em `public/en/blog/`.
 - As páginas de temas ficam em `public/temas/` e `public/en/topics/`.
+- A página de links fica em `public/links/`.
 - Imagens, ícones e preview social ficam em `public/assets/img/`.
-- Capturas de referência visual ficam em `docs/`.
-- Rode localmente com `npm start` e abra `http://localhost:3000`.
+- Fotos da Carla ficam em `public/assets/img/carla/`.
+- Arquivos Netlify ficam em `netlify.toml`, `public/_headers` e `public/_redirects`.
+- Capturas e artefatos temporários de agentes devem ficar em `.context/` ou `output/`, sem commit.
+- Rode localmente com `npm start` e abra `http://localhost:3838`.
 - Deploy pela Netlify, publicando a pasta `public/`.
 
 Não introduza frameworks, bundlers ou dependências novas sem necessidade. O projeto deve continuar simples, estático e fácil de publicar.
@@ -31,6 +34,8 @@ Não introduza frameworks, bundlers ou dependências novas sem necessidade. O pr
 - Paleta atual: azul profundo `#3F556B`, azul acinzentado `#8FA3AD`, rosa queimado `#D6A5A4`, blush `#E8C7C3`, rosa claro `#F2DAD7`, bege claro `#F4EFEF` e cinza claro quente `#D9D9D9`.
 - Use fotos reais existentes em `public/assets/img/` sempre que possível.
 - Preserve contraste, legibilidade e respiro.
+- Preserve a logo atual da CSM Psicologia, especialmente no header e nos cards de apoio.
+- No mobile, mantenha header compacto com logo, identificação curta e botão Menu.
 - Não volte ao estilo antigo de carrossel, overlays roxos, placeholders em inglês ou animações pesadas.
 - Não use hero genérico com gradiente abstrato quando houver foto real adequada.
 - Mantenha animações leves e respeite `prefers-reduced-motion`.
@@ -86,7 +91,6 @@ Preserve:
 - Telefone: `+55 (67) 99688-2030`
 - E-mail: `carlasuzanamarinho@gmail.com`
 - Endereço: `Rua Oliveira Marques, 1430, Centro - Dourados/MS`
-- Formulário com `name="contact"` e `data-netlify="true"`.
 
 ## Qualidade antes de finalizar
 
@@ -94,4 +98,5 @@ Preserve:
 - Rode `npm start` quando alterar UI.
 - Faça revisão visual em largura mobile e desktop.
 - Confira que WhatsApp, telefone, e-mail, idioma e navegação interna continuam funcionando.
+- Se usar Playwright ou capturas locais, salve em `.context/` ou `output/` e não versione esses artefatos.
 - Mantenha mudanças pequenas e focadas no pedido.

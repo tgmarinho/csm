@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://csmpsicologia.com",
   "scripts": {
-    "start": "npx serve public -l 3000"
+    "start": "npx serve public -l 3838"
   },
   "devDependencies": {
     "serve": "^14.2.4"

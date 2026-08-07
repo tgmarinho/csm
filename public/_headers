@@ -1,0 +1,29 @@
+## Cabeçalhos - CSM Psicologia (Netlify)
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# HTML: sempre revalida (conteúdo pode mudar)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Assets versionáveis: cache longo e imutável
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Arquivos para máquinas
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+/robots.txt
+  Cache-Control: public, max-age=86400
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
