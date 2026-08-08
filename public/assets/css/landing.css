@@ -632,6 +632,10 @@ h3 {
   width: 42%;
 }
 
+.hero-media > picture {
+  display: block;
+}
+
 .hero-main-img {
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
@@ -747,58 +751,64 @@ h3 {
   animation-play-state: paused;
 }
 
-.strip-track img {
+.strip-track picture {
   aspect-ratio: 4 / 5;
-  border: 1px solid rgba(255, 255, 255, 0.68);
-  border-radius: 30px;
-  box-shadow: 0 30px 80px rgba(63, 85, 107, 0.16);
   flex: 0 0 clamp(220px, 24vw, 320px);
   height: clamp(300px, 31vw, 420px);
-  object-fit: cover;
-  object-position: center 18%;
   transform: perspective(1200px) translateY(var(--lift, 0)) rotate(var(--tilt, 0deg)) rotateY(var(--card-ry, 0deg)) scale(var(--scale, 1));
-  transition: box-shadow 220ms ease, filter 220ms ease;
+  transition: transform 220ms ease;
   width: clamp(220px, 24vw, 320px);
 }
 
-.strip-track img:nth-child(5n + 1) {
+.strip-track picture img {
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(63, 85, 107, 0.16);
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transition: box-shadow 220ms ease, filter 220ms ease;
+  width: 100%;
+}
+
+.strip-track picture:nth-child(5n + 1) {
   --lift: -18px;
   --scale: 0.96;
   --tilt: -0.8deg;
 }
 
-.strip-track img:nth-child(5n + 2) {
+.strip-track picture:nth-child(5n + 2) {
   --lift: 34px;
   --scale: 1.04;
   --tilt: 0.5deg;
 }
 
-.strip-track img:nth-child(5n + 3) {
+.strip-track picture:nth-child(5n + 3) {
   --lift: -8px;
   --scale: 0.9;
   --tilt: 0.8deg;
 }
 
-.strip-track img:nth-child(5n + 4) {
+.strip-track picture:nth-child(5n + 4) {
   --lift: 48px;
   --scale: 0.98;
   --tilt: -0.4deg;
 }
 
-.strip-track img:nth-child(5n + 5) {
+.strip-track picture:nth-child(5n + 5) {
   --lift: 16px;
   --scale: 1.04;
   --tilt: 0.7deg;
 }
 
-.strip-track img:hover,
+.strip-track picture:hover img,
 .consultorio-photo img:hover,
 .profile-photo img:hover {
   box-shadow: var(--shadow);
   filter: saturate(1.04);
 }
 
-.strip-track img:hover {
+.strip-track picture:hover {
   --card-ry: -4deg;
   transform: perspective(1200px) translateY(var(--lift, 0)) rotate(var(--tilt, 0deg)) rotateY(var(--card-ry, 0deg)) scale(calc(var(--scale, 1) * 1.018));
 }
@@ -831,6 +841,11 @@ h3 {
 
 .profile-photo {
   display: flex;
+}
+
+.profile-photo picture {
+  display: block;
+  width: 100%;
 }
 
 .profile-photo img {
@@ -1417,6 +1432,12 @@ h3 {
   width: 100%;
 }
 
+.session-card picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 .payment-section {
   padding-top: 10px;
 }
@@ -1627,6 +1648,11 @@ h3 {
 .consultorio-photo {
   justify-self: end;
   width: min(100%, 560px);
+}
+
+.consultorio-photo picture {
+  display: block;
+  width: 100%;
 }
 
 .consultorio-photo img {
