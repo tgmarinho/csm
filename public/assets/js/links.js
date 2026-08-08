@@ -16,6 +16,54 @@ const languageMeta = {
   }
 };
 
+const getContactClickEvent = (href) => {
+  const normalizedHref = href.toLowerCase();
+
+  if (normalizedHref.startsWith("tel:")) {
+    return { name: "click_phone", method: "phone" };
+  }
+
+  if (normalizedHref.startsWith("mailto:")) {
+    return { name: "click_email", method: "email" };
+  }
+
+  let url;
+
+  try {
+    url = new URL(href, window.location.href);
+  } catch {
+    return null;
+  }
+
+  const hostname = url.hostname.replace(/^www\./, "");
+
+  if (hostname === "wa.me" || hostname === "api.whatsapp.com") {
+    return { name: "click_whatsapp", method: "whatsapp" };
+  }
+
+  if (hostname === "instagram.com") {
+    return { name: "click_instagram", method: "instagram" };
+  }
+
+  return null;
+};
+
+document.addEventListener("click", (event) => {
+  const target = event.target instanceof Element ? event.target : null;
+  const link = target ? target.closest("a[href]") : null;
+
+  if (!link || typeof window.gtag !== "function") return;
+
+  const contactEvent = getContactClickEvent(link.getAttribute("href") || "");
+  if (!contactEvent) return;
+
+  window.gtag("event", contactEvent.name, {
+    contact_method: contactEvent.method,
+    link_type: "contact",
+    transport_type: "beacon"
+  });
+});
+
 const showRevealItems = () => {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 };
@@ -41,6 +89,22 @@ const setLanguage = (language) => {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
+
+const whatsappFab = document.querySelector(".wa-fab");
+const bioFooter = document.querySelector(".bio-footer");
+
+if (whatsappFab && bioFooter && "IntersectionObserver" in window) {
+  const fabObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        whatsappFab.classList.toggle("is-hidden", entry.isIntersecting);
+      });
+    },
+    { threshold: 0.01 }
+  );
+
+  fabObserver.observe(bioFooter);
+}
 
 if (linksMotionQuery.matches || !("IntersectionObserver" in window)) {
   showRevealItems();
