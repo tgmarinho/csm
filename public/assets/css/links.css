@@ -259,12 +259,6 @@ img {
   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.social-links a:hover {
-  background: var(--bio-white);
-  border-color: rgba(63, 85, 107, 0.35);
-  transform: translateY(-2px);
-}
-
 .social-mark {
   display: grid;
   width: 27px;
@@ -1014,6 +1008,8 @@ html.links-motion-ready .link-list [data-reveal]:nth-child(5) {
 .social-links a:hover,
 .social-links a:focus-visible {
   transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 15px 26px rgba(63, 85, 107, 0.24);
+  filter: brightness(1.07);
 }
 
 .social-links a:hover .social-mark,
@@ -1260,6 +1256,7 @@ html.links-motion-ready .link-list [data-reveal]:nth-child(5) {
 
 .contact-button {
   position: relative;
+  overflow: hidden;
   justify-content: center;
   width: min(100%, 360px);
   min-height: 54px;
@@ -1271,6 +1268,49 @@ html.links-motion-ready .link-list [data-reveal]:nth-child(5) {
   font-size: 0.82rem;
   box-shadow: 0 12px 22px rgba(39, 123, 90, 0.24);
   animation: whatsapp-pulse 3.4s ease-in-out infinite;
+}
+
+.contact-button > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.28) 46%, transparent 72%);
+  transform: translateX(-160%);
+  animation: contact-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.contact-button .contact-icon {
+  animation: wa-nudge 5s ease-in-out infinite;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--wa-angle),
+    rgba(255, 255, 255, 0) 0deg,
+    rgba(255, 255, 255, 0) 250deg,
+    rgba(210, 255, 230, 0.55) 300deg,
+    rgba(255, 255, 255, 0.95) 336deg,
+    rgba(210, 255, 230, 0.55) 356deg,
+    rgba(255, 255, 255, 0) 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: wa-border-rotate 3.2s linear infinite;
 }
 
 .contact-button:hover,
@@ -1318,6 +1358,138 @@ html.links-motion-ready .link-list [data-reveal]:nth-child(5) {
 @keyframes logo-border-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes contact-shine {
+  0% {
+    transform: translateX(-160%);
+  }
+
+  22%,
+  100% {
+    transform: translateX(160%);
+  }
+}
+
+@keyframes wa-nudge {
+  0%,
+  82%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  88% {
+    transform: rotate(-10deg) scale(1.12);
+  }
+
+  94% {
+    transform: rotate(7deg) scale(1.08);
+  }
+}
+
+@property --wa-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes wa-border-rotate {
+  to {
+    --wa-angle: 360deg;
+  }
+}
+
+/* Floating WhatsApp button */
+.wa-fab {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 340ms cubic-bezier(0.22, 1, 0.36, 1), transform 340ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wa-fab.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(18px) scale(0.82);
+}
+
+.wa-fab__label {
+  display: inline-flex;
+  align-items: center;
+  max-width: 0;
+  overflow: hidden;
+  padding: 13px 0;
+  border-radius: 999px;
+  background: rgba(255, 253, 252, 0.96);
+  border: 1px solid rgba(48, 71, 92, 0.12);
+  box-shadow: 0 16px 40px rgba(48, 71, 92, 0.18);
+  color: var(--bio-blue-dark);
+  font-size: 0.84rem;
+  font-weight: 800;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: max-width 360ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease,
+    padding 360ms cubic-bezier(0.22, 1, 0.36, 1), transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wa-fab:hover .wa-fab__label,
+.wa-fab:focus-visible .wa-fab__label {
+  max-width: 240px;
+  padding: 13px 18px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wa-fab__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #00c85f;
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(8, 88, 48, 0.28);
+  animation: wa-fab-pulse 2.6s ease-out infinite;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.wa-fab:hover .wa-fab__btn,
+.wa-fab:focus-visible .wa-fab__btn {
+  background: #00b956;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.wa-fab__btn svg {
+  width: 34px;
+  height: 34px;
+  fill: currentColor;
+}
+
+.wa-fab:focus-visible {
+  outline: 3px solid rgba(0, 194, 95, 0.5);
+  outline-offset: 6px;
+  border-radius: 999px;
+}
+
+@keyframes wa-fab-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 194, 95, 0.32), 0 16px 36px rgba(8, 88, 48, 0.26);
+  }
+
+  70% {
+    box-shadow: 0 0 0 16px rgba(0, 194, 95, 0), 0 16px 36px rgba(8, 88, 48, 0.26);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 194, 95, 0), 0 16px 36px rgba(8, 88, 48, 0.26);
   }
 }
 
