@@ -260,6 +260,29 @@ const initWhatsappFloat = () => {
 
 initWhatsappFloat();
 
+// Make the whole blog card clickable, not just the title. The title link stays
+// as the real, keyboard- and screen-reader-accessible target; this just extends
+// the pointer hit area to the entire card. Text selection and inner links keep
+// working normally.
+document.querySelectorAll(".blog-card").forEach((card) => {
+  const link = card.querySelector("h3 a[href]");
+  if (!link) return;
+
+  card.classList.add("is-clickable");
+
+  card.addEventListener("click", (event) => {
+    if (event.defaultPrevented) return;
+    // Let real links (including the title itself) and other interactive
+    // elements handle their own clicks.
+    if (event.target.closest("a, button")) return;
+    // Don't hijack a click that was actually a text selection.
+    const selection = window.getSelection ? window.getSelection().toString() : "";
+    if (selection) return;
+
+    link.click();
+  });
+});
+
 if (!prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
   document.querySelectorAll(".service-card, .focus-card, .blog-card, .session-steps div, .contact-whatsapp, details").forEach((element) => {
     element.addEventListener("pointermove", (event) => {
