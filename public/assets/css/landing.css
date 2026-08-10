@@ -53,6 +53,10 @@
 html {
   max-width: 100%;
   overflow-x: hidden;
+  /* clip contains stray horizontal overflow without creating a scroll
+     container, so the sticky header keeps working (overflow-x: hidden alone
+     forces overflow-y to auto and breaks position: sticky). */
+  overflow-x: clip;
   scroll-padding-top: var(--anchor-offset);
   scroll-behavior: smooth;
 }
@@ -71,6 +75,7 @@ body {
   letter-spacing: 0;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -2273,7 +2278,7 @@ address span,
 @media (max-width: 640px) {
   :root {
     --anchor-offset: 92px;
-    --container: calc(100vw - 28px);
+    --container: calc(100vw - 40px);
   }
 
   .site-header {
@@ -2282,7 +2287,7 @@ address span,
     gap: 10px;
     justify-content: flex-start;
     margin-top: 10px;
-    max-width: calc(100vw - 28px);
+    max-width: calc(100vw - 40px);
     min-height: 58px;
     overflow: visible;
     padding: 12px 14px;
@@ -2431,7 +2436,7 @@ address span,
   .session-section,
   .contact-card,
   .site-footer {
-    max-width: calc(100vw - 28px);
+    max-width: calc(100vw - 40px);
   }
 
   .hero-facts {
@@ -2487,12 +2492,14 @@ address span,
     padding: 14px;
   }
 
-  .section {
-    padding: 72px 0;
+  .section,
+  .session-section,
+  .start-section {
+    padding: 56px 0;
   }
 
   .profile-band {
-    padding: 64px 14px;
+    padding: 56px 20px;
   }
 
   .service-grid {
@@ -2516,7 +2523,11 @@ address span,
   }
 
   .quote-section {
-    padding: 56px 14px;
+    padding: 52px 20px;
+  }
+
+  .local-band {
+    padding: 40px 22px;
   }
 
   .quote-action {
@@ -2536,7 +2547,7 @@ address span,
   }
 
   .contact-section {
-    padding-bottom: 72px;
+    padding: 56px 0 80px;
   }
 
   .contact-card {
@@ -2817,5 +2828,19 @@ address span,
   .js-animate [data-animate] {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Ritmo vertical e recuos laterais padronizados no mobile.
+   Colocado ao final para vencer as regras-base de componentes
+   declaradas depois do primeiro bloco @media (max-width: 640px). */
+@media (max-width: 640px) {
+  .start-section {
+    padding: 56px 0;
+  }
+
+  .local-band {
+    gap: 20px;
+    padding: 36px 22px;
   }
 }

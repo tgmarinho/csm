@@ -1216,7 +1216,8 @@ html.links-motion-ready .link-list [data-reveal]:nth-child(5) {
   opacity: 0.84;
 }
 
-.care-section {
+.care-section,
+.reading-section {
   padding-top: 34px;
 }
 
