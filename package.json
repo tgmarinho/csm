@@ -4,7 +4,8 @@
   "private": true,
   "homepage": "https://csmpsicologia.com",
   "scripts": {
-    "start": "npx serve public -l 3838"
+    "start": "npx serve public -l 3838",
+    "build": "node scripts/stamp-assets.mjs"
   },
   "devDependencies": {
     "serve": "^14.2.4"

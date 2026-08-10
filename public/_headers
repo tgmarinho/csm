@@ -11,13 +11,19 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# Assets versionáveis: cache longo e imutável
+# CSS/JS são versionados por hash de conteúdo em ?v= (ver scripts/stamp-assets.mjs,
+# rodado no build da Netlify), então cada versão é uma URL nova e immutable é
+# seguro: cache de 1 ano, visitas repetidas instantâneas, e a URL muda sozinha
+# quando o arquivo muda. NÃO volte a servir sem versão, ou devices ficam presos
+# na versão antiga por até 1 ano.
 /assets/css/*
   Cache-Control: public, max-age=31536000, immutable
 /assets/js/*
   Cache-Control: public, max-age=31536000, immutable
+# Imagens não são versionadas; cache curto com revalidação em segundo plano
+# evita logo/preview presos em versão antiga sem perder performance.
 /assets/img/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Arquivos para máquinas
 /sitemap.xml

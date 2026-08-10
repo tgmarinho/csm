@@ -13,20 +13,23 @@ O público principal são pessoas procurando atendimento psicológico para si, f
 - Edite principalmente arquivos dentro de `public/`.
 - A home em português é `public/index.html`.
 - A home em inglês é `public/en/index.html`.
-- O CSS principal é `public/assets/css/landing.css`.
-- O JavaScript leve é `public/assets/js/site.js`.
+- O CSS principal é `public/assets/css/landing.css`; o CSS da página de links é `public/assets/css/links.css`.
+- O JavaScript leve da home é `public/assets/js/site.js`; o da página de links é `public/assets/js/links.js`.
 - O blog em português fica em `public/blog/`.
 - O blog em inglês fica em `public/en/blog/`.
 - As páginas de temas ficam em `public/temas/` e `public/en/topics/`.
 - A página de links fica em `public/links/`.
 - Imagens, ícones e preview social ficam em `public/assets/img/`.
-- Fotos da Carla ficam em `public/assets/img/carla/`.
-- Arquivos Netlify ficam em `netlify.toml`, `public/_headers` e `public/_redirects`.
+- Fotos da Carla ficam em `public/assets/img/carla/`, com variantes responsivas `.webp` (320w, 640w, 960w, 1200w) e fallback `.jpg`.
+- O manifesto PWA é `public/manifest.json`; favicons e ícones de app ficam em `public/assets/img/`.
+- Arquivos para máquinas ficam em `public/robots.txt`, `public/sitemap.xml` e `public/llms.txt`.
+- Arquivos Netlify ficam em `netlify.toml`, `public/_headers` (cabeçalhos de segurança e cache) e `public/_redirects` (ex.: `/links` e `/bio` para `/links/`; catch-all para `404.html`).
 - Capturas e artefatos temporários de agentes devem ficar em `.context/` ou `output/`, sem commit.
-- Rode localmente com `npm start` e abra `http://localhost:3838`.
-- Deploy pela Netlify, publicando a pasta `public/`.
+- Rode localmente com `npm start` e abra `http://localhost:3838`. Se a porta 3838 estiver ocupada por outro processo, o `serve` sobe em porta aleatória; confira a URL impressa no terminal.
+- O cache-busting é feito por `scripts/stamp-assets.mjs` (rodado via `npm run build` no deploy da Netlify), que injeta `?v=<hash-do-conteúdo>` nas refs de CSS/JS. Não edite o `?v=` à mão; se alterar `landing.css`, `site.js`, `links.css` ou `links.js`, rode `npm run build` para reestampar. Isso é o que torna seguro servir os assets como `immutable` em `public/_headers`.
+- Deploy pela Netlify, publicando a pasta `public/` (a Netlify roda `npm run build` antes de publicar).
 
-Não introduza frameworks, bundlers ou dependências novas sem necessidade. O projeto deve continuar simples, estático e fácil de publicar.
+Não introduza frameworks, bundlers ou dependências novas sem necessidade. O projeto deve continuar simples, estático e fácil de publicar. O único passo de build é o stamp de assets, sem dependências além do Node.
 
 ## Direção visual
 
