@@ -7,11 +7,12 @@ O projeto publica uma landing page bilíngue, páginas educativas por tema e blo
 ## Stack
 
 - HTML estático dentro de `public/`.
-- CSS próprio em `public/assets/css/landing.css`.
-- JavaScript leve em `public/assets/js/site.js`.
-- Imagens reais e favicons em `public/assets/img/`.
+- CSS próprio em `public/assets/css/landing.css` (home) e `public/assets/css/links.css` (página de links).
+- JavaScript leve em `public/assets/js/site.js` (home) e `public/assets/js/links.js` (página de links).
+- Imagens reais e favicons em `public/assets/img/`, com fotos responsivas `.webp` (320w a 1200w) e fallback `.jpg`.
 - Fotos da profissional em `public/assets/img/carla/`.
-- Headers e redirects da Netlify em `public/_headers` e `public/_redirects`.
+- PWA básico via `public/manifest.json` (nome, ícones, cores de tema).
+- Headers de segurança e cache em `public/_headers`; redirects em `public/_redirects`.
 - Deploy pela Netlify usando `public/` como diretório publicado.
 
 Não há framework, bundler ou etapa de build.
@@ -23,6 +24,7 @@ npm start
 ```
 
 Serve `public/` em `http://localhost:3838`.
+Se a porta 3838 estiver ocupada, o `serve` sobe em outra porta; verifique a URL exibida no terminal.
 
 O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo `netlify.toml` já define essa configuração.
 
@@ -39,12 +41,16 @@ O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo 
 - `public/links/`: página compacta de links para redes sociais e contato.
 - `public/assets/css/links.css`: CSS da página de links.
 - `public/assets/js/links.js`: JavaScript leve da página de links.
+- `public/manifest.json`: manifesto PWA (nome, ícones, cores).
+- `public/_headers`: cabeçalhos de segurança e política de cache da Netlify.
+- `public/_redirects`: redirects da Netlify (`/links`, `/bio` e catch-all para `404.html`).
 - `public/robots.txt`: orientação para crawlers.
 - `public/sitemap.xml`: URLs indexáveis.
 - `public/llms.txt`: resumo factual para assistentes de IA.
 - `.context/`: capturas e arquivos temporários de agentes locais, não versionados.
 - `output/`: artefatos locais de validação, não versionados.
 - `AGENTS.md`: regras para agentes de IA editarem o repositório.
+- `.agents/skills/` e `skills-lock.json`: skills de design/frontend usadas por agentes, versionadas para reprodutibilidade.
 
 ## SEO e AI SEO
 
