@@ -11,13 +11,21 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# Assets versionáveis: cache longo e imutável
+# CSS e JS NÃO têm hash no nome do arquivo (landing.css, site.js), então NÃO
+# podem ser 'immutable'. Com immutable, devices que já visitaram guardavam a
+# versão antiga por até 1 ano e nunca revalidavam, causando layout quebrado no
+# device real mesmo após deploy. Usamos must-revalidate: o browser revalida via
+# ETag a cada visita (304 quando nada mudou, barato) e pega a versão nova assim
+# que ela sai. Se um dia os assets passarem a ter hash/versão no nome ou em
+# ?v=, aí sim volte a usar 'immutable'.
 /assets/css/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 /assets/js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
+# Imagens também não têm hash; cache curto com revalidação em segundo plano
+# evita logo/preview presos em versão antiga sem perder performance.
 /assets/img/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Arquivos para máquinas
 /sitemap.xml
