@@ -1119,15 +1119,6 @@ h3 {
   text-decoration: none;
 }
 
-.blog-card.is-clickable {
-  cursor: pointer;
-}
-
-.blog-card.is-clickable h3 a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-}
-
 .blog-card p {
   color: var(--muted);
   margin-bottom: 0;
