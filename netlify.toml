@@ -1,3 +1,5 @@
 [build]
   publish = "public"
-  command = ""
+  # Injeta ?v=<hash-do-conteúdo> nas refs de CSS/JS antes de publicar, para que
+  # os assets possam ser servidos como immutable com segurança (ver _headers).
+  command = "node scripts/stamp-assets.mjs"

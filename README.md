@@ -15,7 +15,7 @@ O projeto publica uma landing page bilíngue, páginas educativas por tema e blo
 - Headers de segurança e cache em `public/_headers`; redirects em `public/_redirects`.
 - Deploy pela Netlify usando `public/` como diretório publicado.
 
-Não há framework, bundler ou etapa de build.
+Não há framework nem bundler. O único passo de build é `scripts/stamp-assets.mjs` (cache-busting por hash), leve e sem dependências.
 
 ## Scripts
 
@@ -26,7 +26,15 @@ npm start
 Serve `public/` em `http://localhost:3838`.
 Se a porta 3838 estiver ocupada, o `serve` sobe em outra porta; verifique a URL exibida no terminal.
 
-O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo `netlify.toml` já define essa configuração.
+```bash
+npm run build
+```
+
+Roda `scripts/stamp-assets.mjs`, que injeta `?v=<hash-do-conteúdo>` nas referências de CSS/JS dos HTMLs.
+É o mecanismo de cache-busting do projeto: como os assets não têm hash no nome, a versão na URL permite servi-los como `immutable` (cache de 1 ano) sem prender visitantes na versão antiga - a URL só muda quando o arquivo muda.
+O script é idempotente e não tem dependências além do Node.
+
+O deploy é feito pela Netlify. Use `public/` como publish directory; o `netlify.toml` roda `npm run build` (o stamp) antes de publicar.
 
 ## Estrutura
 
@@ -50,6 +58,7 @@ O deploy é feito pela Netlify. Use `public/` como publish directory; o arquivo 
 - `.context/`: capturas e arquivos temporários de agentes locais, não versionados.
 - `output/`: artefatos locais de validação, não versionados.
 - `AGENTS.md`: regras para agentes de IA editarem o repositório.
+- `scripts/stamp-assets.mjs`: injeta `?v=<hash>` nas refs de CSS/JS (cache-busting no build).
 - `.agents/skills/` e `skills-lock.json`: skills de design/frontend usadas por agentes, versionadas para reprodutibilidade.
 
 ## SEO e AI SEO
