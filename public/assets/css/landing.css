@@ -2470,6 +2470,10 @@ address span,
     font-size: clamp(2.32rem, 10.8vw, 2.9rem);
   }
 
+  #hero-title {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+  }
+
   h2 {
     font-size: clamp(2rem, 11vw, 3.3rem);
   }
@@ -2552,6 +2556,20 @@ address span,
 
   .contact-card {
     padding: 22px;
+  }
+
+  .start-actions {
+    text-align: center;
+  }
+
+  .contact-whatsapp {
+    padding: 22px 18px;
+  }
+
+  .whatsapp-btn {
+    gap: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .site-footer {
