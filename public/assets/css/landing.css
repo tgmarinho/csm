@@ -2354,23 +2354,73 @@ address span,
 
   .nav-toggle {
     align-items: center;
-    background: var(--accent-dark);
+    background: transparent;
     border: 0;
-    border-radius: 999px;
-    color: #fff;
+    border-radius: 12px;
+    color: var(--accent-dark);
     cursor: pointer;
     display: inline-flex;
     flex: 0 0 auto;
-    font-size: 0.78rem;
-    font-weight: 800;
+    height: 44px;
     justify-content: center;
-    min-height: 40px;
-    padding: 0 13px;
+    padding: 0;
+    width: 44px;
+  }
+
+  .nav-toggle-bars,
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    background: currentColor;
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 24px;
+  }
+
+  .nav-toggle-bars {
+    position: relative;
+    transition: background-color 160ms ease;
+  }
+
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    left: 0;
+    position: absolute;
+    transition: transform 300ms var(--ease-premium);
+  }
+
+  .nav-toggle-bars::before {
+    top: -7px;
+  }
+
+  .nav-toggle-bars::after {
+    top: 7px;
+  }
+
+  .site-header.nav-open .nav-toggle-bars {
+    background: transparent;
+  }
+
+  .site-header.nav-open .nav-toggle-bars::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.nav-open .nav-toggle-bars::after {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .nav-toggle:focus-visible {
     outline: 3px solid rgba(214, 165, 164, 0.7);
     outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-toggle-bars,
+    .nav-toggle-bars::before,
+    .nav-toggle-bars::after {
+      transition: none;
+    }
   }
 
   .site-header.nav-open .nav-links {
