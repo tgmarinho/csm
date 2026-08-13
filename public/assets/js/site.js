@@ -118,19 +118,20 @@ const scrollToAnchor = (target, hash, options = {}) => {
 };
 
 if (navToggle && siteHeader) {
+  const labelOpen = navToggle.dataset.labelOpen || "Abrir menu";
+  const labelClose = navToggle.dataset.labelClose || "Fechar menu";
+
   navToggle.addEventListener("click", () => {
     const isOpen = siteHeader.classList.toggle("nav-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
-    navToggle.textContent = isOpen ? "Fechar" : "Menu";
+    navToggle.setAttribute("aria-label", isOpen ? labelClose : labelOpen);
   });
 
   siteHeader.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
       siteHeader.classList.remove("nav-open");
       navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Abrir menu");
-      navToggle.textContent = "Menu";
+      navToggle.setAttribute("aria-label", labelOpen);
     });
   });
 }
