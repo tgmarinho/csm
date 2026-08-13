@@ -2,11 +2,14 @@
 
 :root {
   --bio-ink: #30475c;
-  --bio-muted: #6e7b82;
+  --bio-muted: #5a6773;
   --bio-blue: #3f556b;
   --bio-blue-dark: #293d50;
   --bio-blue-soft: #e5edf0;
   --bio-pink: #d6a5a4;
+  /* Rosa acessível (>= 4.5:1 sobre paper/branco) para TEXTO rosa em fundo claro.
+     O --bio-pink segue reservado a decoração e a setas sobre cards escuros. */
+  --bio-rose: #9d5654;
   --bio-pink-soft: #f2dad7;
   --bio-sage: #78968f;
   --bio-paper: #f4efef;
@@ -539,7 +542,7 @@ img {
 }
 
 .reading-card small span {
-  color: var(--bio-pink);
+  color: var(--bio-rose);
   font-size: 1.1rem;
 }
 
