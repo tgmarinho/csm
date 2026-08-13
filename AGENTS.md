@@ -27,6 +27,11 @@ O público principal são pessoas procurando atendimento psicológico para si, f
 - Capturas e artefatos temporários de agentes devem ficar em `.context/` ou `output/`, sem commit.
 - Rode localmente com `npm start` e abra `http://localhost:3838`. Se a porta 3838 estiver ocupada por outro processo, o `serve` sobe em porta aleatória; confira a URL impressa no terminal.
 - O cache-busting é feito por `scripts/stamp-assets.mjs` (rodado via `npm run build` no deploy da Netlify), que injeta `?v=<hash-do-conteúdo>` nas refs de CSS/JS. Não edite o `?v=` à mão; se alterar `landing.css`, `site.js`, `links.css` ou `links.js`, rode `npm run build` para reestampar. Isso é o que torna seguro servir os assets como `immutable` em `public/_headers`.
+- `npm run check` roda o pacote local de qualidade: build/stamp, `html-validate`, `images:check` com Sharp e crawl interno de links/âncoras com `linkinator`.
+- `npm run audit:lhci` roda Lighthouse CI em `/`, `/en/`, `/links/`, `/blog/` e `/en/blog/`, usando `public/` como pasta estática. Os relatórios ficam em `.context/lhci/`, sem commit.
+- `npm run images:check` confirma que as variantes `.webp` esperadas existem; `npm run images:build` regenera fotos responsivas e logo `.webp` com Sharp.
+- Configurações de qualidade ficam em `lighthouserc.cjs`, `.htmlvalidate.json`, `scripts/check-links.mjs`, `scripts/optimize-images.mjs` e `.github/workflows/quality.yml`.
+- O Lighthouse CI trata acessibilidade, SEO, CLS e erros de console como falha. Performance e LCP estão como warning enquanto a página `/links/` ainda tem LCP alto.
 - Deploy pela Netlify, publicando a pasta `public/` (a Netlify roda `npm run build` antes de publicar).
 
 Não introduza frameworks, bundlers ou dependências novas sem necessidade. O projeto deve continuar simples, estático e fácil de publicar. O único passo de build é o stamp de assets, sem dependências além do Node.
@@ -97,6 +102,8 @@ Preserve:
 
 ## Qualidade antes de finalizar
 
+- Rode `npm run check` para verificar HTML, links internos, fragments, CSS URLs e imagens esperadas.
+- Rode `npm run audit:lhci` quando alterar UI, imagens, CSS/JS crítico ou templates compartilhados.
 - Verifique HTML quebrado, links, imagens e responsividade.
 - Rode `npm start` quando alterar UI.
 - Faça revisão visual em largura mobile e desktop.

@@ -13,6 +13,7 @@ O projeto publica uma landing page bilíngue, páginas educativas por tema e blo
 - Fotos da profissional em `public/assets/img/carla/`.
 - PWA básico via `public/manifest.json` (nome, ícones, cores de tema).
 - Headers de segurança e cache em `public/_headers`; redirects em `public/_redirects`.
+- Checks de qualidade com Lighthouse CI, `html-validate`, `linkinator` e Sharp.
 - Deploy pela Netlify usando `public/` como diretório publicado.
 
 Não há framework nem bundler. O único passo de build é `scripts/stamp-assets.mjs` (cache-busting por hash), leve e sem dependências.
@@ -33,6 +34,33 @@ npm run build
 Roda `scripts/stamp-assets.mjs`, que injeta `?v=<hash-do-conteúdo>` nas referências de CSS/JS dos HTMLs.
 É o mecanismo de cache-busting do projeto: como os assets não têm hash no nome, a versão na URL permite servi-los como `immutable` (cache de 1 ano) sem prender visitantes na versão antiga - a URL só muda quando o arquivo muda.
 O script é idempotente e não tem dependências além do Node.
+
+```bash
+npm run check
+```
+
+Roda a validação local antes de publicar: `npm run build`, HTML estático com `html-validate`, presença das imagens responsivas com Sharp e crawl de links/âncoras internas com `linkinator`.
+
+```bash
+npm run check:html
+npm run check:links
+```
+
+Executam as partes separadas do check. O crawler sobe um servidor local temporário em porta livre, valida links internos, CSS e fragments, e ignora links externos para evitar falha por instabilidade de terceiros.
+
+```bash
+npm run images:check
+npm run images:build
+```
+
+`images:check` confirma que as variantes `.webp` esperadas existem. `images:build` usa Sharp para gerar novamente as variantes responsivas das fotos em `public/assets/img/carla/` e o `logo_psi_2.webp`.
+
+```bash
+npm run audit:lhci
+```
+
+Roda Lighthouse CI contra as URLs principais (`/`, `/en/`, `/links/`, `/blog/`, `/en/blog/`) usando `public/` como pasta estática. Os relatórios HTML/JSON ficam em `.context/lhci/`, que não deve ser versionada.
+Os thresholds atuais tratam acessibilidade, SEO, CLS e erros de console como falha; performance e LCP começam como warning para permitir acompanhar regressões enquanto a página `/links/` ainda é otimizada.
 
 O deploy é feito pela Netlify. Use `public/` como publish directory; o `netlify.toml` roda `npm run build` (o stamp) antes de publicar.
 
@@ -59,6 +87,11 @@ O deploy é feito pela Netlify. Use `public/` como publish directory; o `netlify
 - `output/`: artefatos locais de validação, não versionados.
 - `AGENTS.md`: regras para agentes de IA editarem o repositório.
 - `scripts/stamp-assets.mjs`: injeta `?v=<hash>` nas refs de CSS/JS (cache-busting no build).
+- `scripts/check-links.mjs`: sobe servidor temporário e roda `linkinator` nos links internos.
+- `scripts/optimize-images.mjs`: gera ou confere variantes `.webp` com Sharp.
+- `lighthouserc.cjs`: configuração do Lighthouse CI.
+- `.htmlvalidate.json`: regras do validador HTML.
+- `.github/workflows/quality.yml`: workflow de CI para `npm run check` e `npm run audit:lhci`.
 - `.agents/skills/` e `skills-lock.json`: skills de design/frontend usadas por agentes, versionadas para reprodutibilidade.
 
 ## SEO e AI SEO
@@ -82,6 +115,8 @@ Evite promessas de cura, garantias de resultado, diagnósticos, aconselhamento p
 
 ## Checklist
 
+- Rodar `npm run check` antes de finalizar mudanças.
+- Rodar `npm run audit:lhci` quando alterar UI, imagens, CSS/JS crítico ou templates compartilhados.
 - Rodar `npm start` e revisar `http://localhost:3838`.
 - Conferir desktop e mobile.
 - Verificar links de WhatsApp, telefone, e-mail, idiomas e navegação interna.

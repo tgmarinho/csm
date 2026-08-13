@@ -3,6 +3,40 @@ const animatedElements = document.querySelectorAll("[data-animate]");
 
 const navToggle = document.querySelector(".nav-toggle");
 const siteHeader = document.querySelector(".site-header");
+const GA_MEASUREMENT_ID = "G-D10WLRXQW0";
+
+window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function gtag() {
+  window.dataLayer.push(arguments);
+};
+
+let analyticsLoaded = false;
+
+const loadAnalytics = () => {
+  if (analyticsLoaded || navigator.doNotTrack === "1") return;
+  analyticsLoaded = true;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(script);
+
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID);
+};
+
+const scheduleAnalytics = () => {
+  window.setTimeout(loadAnalytics, 12000);
+  ["pointerdown", "keydown", "touchstart", "scroll"].forEach((eventName) => {
+    window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+  });
+};
+
+if (document.readyState === "complete") {
+  scheduleAnalytics();
+} else {
+  window.addEventListener("load", scheduleAnalytics, { once: true });
+}
 
 const normalizePath = (path) => path.replace(/\/index\.html$/, "/");
 
@@ -90,6 +124,7 @@ document.addEventListener("click", (event) => {
   const contactEvent = getContactClickEvent(link.getAttribute("href") || "");
   if (!contactEvent) return;
 
+  loadAnalytics();
   window.gtag("event", contactEvent.name, {
     contact_method: contactEvent.method,
     link_type: "contact",
