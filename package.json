@@ -5,9 +5,19 @@
   "homepage": "https://csmpsicologia.com",
   "scripts": {
     "start": "npx serve public -l 3838",
-    "build": "node scripts/stamp-assets.mjs"
+    "build": "node scripts/stamp-assets.mjs",
+    "audit:lhci": "npm run build && lhci autorun",
+    "check": "npm run build && npm run check:html && npm run images:check && npm run check:links",
+    "check:html": "html-validate \"public/**/*.html\"",
+    "check:links": "node scripts/check-links.mjs",
+    "images:build": "node scripts/optimize-images.mjs --write",
+    "images:check": "node scripts/optimize-images.mjs --check"
   },
   "devDependencies": {
-    "serve": "^14.2.4"
+    "@lhci/cli": "^0.15.1",
+    "html-validate": "^11.6.2",
+    "linkinator": "^8.0.3",
+    "serve": "^14.2.4",
+    "sharp": "^0.35.3"
   }
 }

@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D10WLRXQW0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D10WLRXQW0');
-    </script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:160">
@@ -29,6 +20,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#3F556B">
+    <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/img/carla/carla-suzana-marinho-blazer-bege-512w.webp" as="image" type="image/webp" fetchpriority="high" imagesrcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-512w.webp 512w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" imagesizes="(max-width: 760px) 248px, 300px">
 
     <meta property="og:locale" content="pt_BR">
     <meta property="og:locale:alternate" content="en_US">
@@ -50,7 +44,7 @@
     <meta name="twitter:image" content="https://csmpsicologia.com/assets/img/preview.jpg">
     <meta name="twitter:image:alt" content="Carla Suzana Marinho, psicóloga clínica online">
 
-    <link rel="stylesheet" href="assets/css/landing.css?v=cf1ed91ac1">
+    <link rel="stylesheet" href="assets/css/landing.css?v=6d3bfa7ce8">
 
     <script type="application/ld+json">
       {
@@ -277,8 +271,8 @@
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <header class="site-header" aria-label="Navegação principal" data-animate>
-      <a class="brand" href="#inicio" aria-label="Carla Suzana Marinho Psicóloga">
-        <img src="assets/img/logo_psi_2.png" alt="CSM Psicologia" width="104" height="104">
+      <a class="brand" href="#inicio" aria-label="Carla Suzana Marinho Psicóloga clínica e Neuropsicóloga">
+        <img src="assets/img/logo_psi_2.webp" alt="CSM Psicologia" width="107" height="83">
         <span>
           <strong>Carla Suzana Marinho</strong>
           <small>Psicóloga clínica e Neuropsicóloga</small>
@@ -322,8 +316,8 @@
         </div>
         <div class="hero-media" role="group" aria-label="Consultório de psicologia" data-animate>
           <picture>
-            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 82vw, 430px">
-            <img class="hero-main-img" src="assets/img/carla/carla-suzana-marinho-blazer-bege.jpg" alt="Carla Suzana Marinho, psicóloga clínica" width="1280" height="1600" fetchpriority="high">
+            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-512w.webp 512w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 248px, 300px">
+            <img class="hero-main-img" src="assets/img/carla/carla-suzana-marinho-blazer-bege.jpg" alt="Carla Suzana Marinho, psicóloga clínica" width="1280" height="1600" fetchpriority="high" loading="eager" decoding="async">
           </picture>
           <picture>
             <source type="image/webp" srcset="assets/img/logo_psi_2.webp">
@@ -349,55 +343,55 @@
           <p>Clique em um tema para ler uma orientação inicial e conhecer caminhos de cuidado.</p>
         </div>
         <div class="focus-row" role="group" aria-label="Informações rápidas">
-          <a class="focus-card" href="/temas/terapia-online.html" aria-label="Ler mais sobre terapia online">
+          <a class="focus-card" href="/temas/terapia-online.html">
             <span>Modalidade</span>
             <strong>Online</strong>
             <small>Atendimento com sigilo e combinados claros.</small>
           </a>
-          <a class="focus-card" href="/temas/atendimento-em-portugues-e-ingles.html" aria-label="Ler mais sobre atendimento em português e inglês">
+          <a class="focus-card" href="/temas/atendimento-em-portugues-e-ingles.html">
             <span>Idiomas</span>
             <strong>PT / EN</strong>
             <small>Para quem precisa transitar entre português e inglês.</small>
           </a>
         </div>
         <div class="service-grid" id="temas-cuidado">
-          <a class="service-card" href="/temas/tdah.html" aria-label="Ler mais sobre terapia para TDAH">
+          <a class="service-card" href="/temas/tdah.html">
             <span>TDAH</span>
             <h3>Atenção, organização e autocobrança</h3>
             <p>TDAH não é falta de esforço. É viver com uma mente que muitas vezes funciona em um ritmo diferente.</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/ansiedade.html" aria-label="Ler mais sobre terapia para ansiedade">
+          <a class="service-card" href="/temas/ansiedade.html">
             <span>Ansiedade</span>
             <h3>Preocupação, medo e corpo em alerta</h3>
             <p>Nem toda ansiedade é visível. Às vezes ela aparece como preocupação constante ou uma mente que não desliga.</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/depressao.html" aria-label="Ler mais sobre terapia para depressão">
+          <a class="service-card" href="/temas/depressao.html">
             <span>Depressão</span>
             <h3>Desânimo, isolamento e perda de energia</h3>
             <p>A depressão vai muito além da tristeza. Pode surgir como cansaço constante, culpa ou dificuldade para sentir prazer.</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/burnout.html" aria-label="Ler mais sobre sobrecarga emocional e burnout">
+          <a class="service-card" href="/temas/burnout.html">
             <span>Burnout</span>
             <h3>Sobrecarga emocional e burnout</h3>
             <p>Você sente que está sempre dando conta de tudo... até não conseguir mais?</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/relacionamentos.html" aria-label="Ler mais sobre terapia para relacionamentos e família">
+          <a class="service-card" href="/temas/relacionamentos.html">
             <span>Relações</span>
             <h3>Relacionamentos e família</h3>
             <p>Relacionamentos saudáveis também se constroem. Conflitos, limites e culpa podem gerar sofrimento.</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/adolescentes.html" aria-label="Ler mais sobre atendimento psicológico para adolescentes">
+          <a class="service-card" href="/temas/adolescentes.html">
             <span>Adolescentes</span>
             <h3>Atendimento para adolescentes</h3>
             <p>A adolescência é uma fase de muitas mudanças e desafios. Um espaço de escuta ajuda a atravessá-la.</p>
             <span class="service-more">Saiba mais</span>
           </a>
-          <a class="service-card" href="/temas/brasileiros-no-exterior.html" aria-label="Ler mais sobre terapia online para brasileiros no exterior">
+          <a class="service-card" href="/temas/brasileiros-no-exterior.html">
             <span>Exterior</span>
             <h3>Brasileiros no exterior</h3>
             <p>Morar fora transforma a vida - e desperta desafios emocionais que nem sempre são visíveis.</p>
@@ -421,7 +415,7 @@
             <img src="assets/img/carla/carla-suzana-marinho-poltrona.jpg" alt="Carla Suzana Marinho sentada na poltrona do consultório" width="1200" height="1600" loading="lazy">
           </picture>
           <picture>
-            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 220px, 320px">
+            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-512w.webp 512w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 220px, 320px">
             <img src="assets/img/carla/carla-suzana-marinho-blazer-bege.jpg" alt="Carla Suzana Marinho, psicóloga clínica" width="1280" height="1600" loading="lazy">
           </picture>
           <picture>
@@ -469,7 +463,7 @@
             <img src="assets/img/carla/carla-suzana-marinho-poltrona.jpg" alt="" width="1200" height="1600" loading="lazy" aria-hidden="true">
           </picture>
           <picture>
-            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 220px, 320px">
+            <source type="image/webp" srcset="assets/img/carla/carla-suzana-marinho-blazer-bege-320w.webp 320w, assets/img/carla/carla-suzana-marinho-blazer-bege-512w.webp 512w, assets/img/carla/carla-suzana-marinho-blazer-bege-640w.webp 640w, assets/img/carla/carla-suzana-marinho-blazer-bege-960w.webp 960w, assets/img/carla/carla-suzana-marinho-blazer-bege-1200w.webp 1200w, assets/img/carla/carla-suzana-marinho-blazer-bege-1280w.webp 1280w" sizes="(max-width: 760px) 220px, 320px">
             <img src="assets/img/carla/carla-suzana-marinho-blazer-bege.jpg" alt="" width="1280" height="1600" loading="lazy" aria-hidden="true">
           </picture>
           <picture>
@@ -680,7 +674,7 @@
           <p><span class="quote-highlight-initial">C</span>omo é bom estar em paz consigo mesmo. <span class="quote-highlight-initial">C</span>omo é bom fazer <span class="quote-highlight-underlined">psicoterapia</span>.</p>
         </div>
         <div class="quote-action">
-          <img class="quote-logo" src="assets/img/logo_psi_2.png" alt="" width="107" height="83" loading="lazy" aria-hidden="true">
+          <img class="quote-logo" src="assets/img/logo_psi_2.webp" alt="" width="107" height="83" loading="lazy" aria-hidden="true">
           <a class="btn btn-light" href="#contato">Conversar sobre terapia</a>
         </div>
       </section>
@@ -887,7 +881,7 @@
 
     <footer class="site-footer">
       <div class="footer-brand">
-        <img src="assets/img/logo_psi_2.png" alt="CSM Psicologia" width="107" height="83" loading="lazy">
+        <img src="assets/img/logo_psi_2.webp" alt="CSM Psicologia" width="107" height="83" loading="lazy">
         <div>
         <p>Carla Suzana Marinho - Psicóloga clínica</p>
         <p class="footer-quote">Tudo o que é verdadeiro, respeitável, justo, puro, amável e de boa fama ocupe o pensamento.</p>
@@ -899,6 +893,6 @@
         <a href="mailto:carlasuzanamarinho@gmail.com">E-mail</a>
       </div>
     </footer>
-    <script src="assets/js/site.js?v=9db117d97c" defer></script>
+    <script src="assets/js/site.js?v=2c94a3d5a5" defer></script>
   </body>
 </html>
