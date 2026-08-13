@@ -2,7 +2,7 @@
 
 :root {
   --ink: #3f556b;
-  --muted: #6f7d86;
+  --muted: #5a6773;
   --line: rgba(63, 85, 107, 0.16);
   --paper: #f4efef;
   --paper-strong: #ffffff;
@@ -10,6 +10,9 @@
   --accent-dark: #2d3e51;
   --accent-soft: #e8eef1;
   --pink: #d6a5a4;
+  /* Rosa acessível (>= 4.5:1 sobre paper e branco) para TEXTO de kicker/label.
+     O --pink continua reservado a acentos decorativos (pontos, bordas, sublinhados). */
+  --kicker: #9d5654;
   --pink-soft: #f2dad7;
   --blush: #e8c7c3;
   --mist: #f4efef;
@@ -26,6 +29,17 @@
   --font-label: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
   --anchor-offset: 112px;
+  /* Escala de espaçamento (ritmo vertical previsivel: 8/12/16/24/32/40/64/96). */
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-16: 64px;
+  --space-24: 96px;
+  /* Ritmo vertical fluido e consistente entre seções (evita o salto 56px -> 92px). */
+  --section-y: clamp(64px, 7.5vw, 100px);
 }
 
 @property --ring-angle {
@@ -97,6 +111,20 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+/* Foco de teclado consistente e elegante para todos os elementos interativos.
+   :where() tem especificidade 0, então componentes com foco proprio (service-card,
+   nav-toggle, whatsapp-float) continuam vencendo. O outline respeita o border-radius. */
+:where(a, button, summary, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(a, button, summary, input, textarea, select, [tabindex]) {
+    transition: outline-offset 160ms var(--ease-premium);
+  }
 }
 
 .skip-link {
@@ -317,7 +345,7 @@ textarea {
 
 .eyebrow,
 .section-kicker {
-  color: var(--pink);
+  color: var(--kicker);
   font-family: var(--font-label);
   font-size: 0.96rem;
   font-weight: 750;
@@ -331,6 +359,19 @@ h2,
 h3,
 p {
   margin-top: 0;
+}
+
+/* Quebras de linha mais equilibradas nos titulos e menos orfaos na prosa longa. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+.rich-text,
+.section-lead {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -596,7 +637,7 @@ h3 {
 }
 
 .focus-row span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.8rem;
@@ -694,7 +735,7 @@ h3 {
 }
 
 .hero-note span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.75rem;
@@ -713,7 +754,7 @@ h3 {
 .section {
   width: var(--container);
   margin: 0 auto;
-  padding: 92px 0;
+  padding: var(--section-y) 0;
 }
 
 .visual-strip {
@@ -1103,7 +1144,7 @@ h3 {
 }
 
 .blog-card span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.84rem;
@@ -1170,7 +1211,7 @@ h3 {
 }
 
 .article-meta {
-  color: var(--pink);
+  color: var(--kicker);
   font-weight: 800;
   margin-bottom: 18px;
 }
@@ -1208,7 +1249,7 @@ h3 {
 }
 
 .breadcrumb a:hover {
-  color: var(--pink);
+  color: var(--kicker);
 }
 
 .breadcrumb li:first-child a:first-child::before {
@@ -1328,7 +1369,7 @@ h3 {
 }
 
 .service-card > span:not(.service-more) {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.78rem;
@@ -1361,7 +1402,7 @@ h3 {
 }
 
 .service-card:hover .service-more {
-  color: var(--pink);
+  color: var(--kicker);
 }
 
 .service-card:hover .service-more::after {
@@ -1477,7 +1518,7 @@ h3 {
 }
 
 .payment-card span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.82rem;
@@ -1557,7 +1598,7 @@ h3 {
 }
 
 .trust-card span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.82rem;
@@ -1598,7 +1639,7 @@ h3 {
 
 .quote-highlight-initial,
 .quote-highlight-underlined {
-  color: var(--pink);
+  color: var(--kicker);
 }
 
 .quote-highlight-underlined {
@@ -1724,7 +1765,7 @@ details p {
 }
 
 .contact-card .section-kicker {
-  color: var(--pink);
+  color: var(--kicker);
 }
 
 .contact-card h2 {
@@ -2803,7 +2844,7 @@ address span,
 }
 
 .cred-card span {
-  color: var(--pink);
+  color: var(--kicker);
   display: block;
   font-family: var(--font-label);
   font-size: 0.82rem;
